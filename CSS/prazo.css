@@ -1,0 +1,206 @@
+/* style.css */
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 10px;
+}
+
+/* Barra superior */
+/* HEADER principal */
+#topo {
+  background-color: #1c2d59;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 5px;
+  border-radius: 5px;
+  margin-bottom: 5%;
+}
+
+/* Menus laterais */
+.menu-esquerdo,
+.menu-direito {
+  display: flex;
+  gap: 5px;
+}
+
+.icone {
+  background: none;
+  border: none;
+  padding: 1px;
+  cursor: pointer;
+}
+
+.icone img {
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.icone img:hover {
+  transform: scale(1.2);
+}
+
+/* Logo central com nome */
+.logo-central {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.logo-central span {
+  color: #8dcaff;
+}
+
+
+/* Filtros superiores */
+#menu-filtros {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+  text-decoration: none;
+}
+
+.filtro {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  background-color: #ccc;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.filtro.ativo {
+  background-color: #3d6dd8;
+  color: white;
+  text-decoration: none;
+}
+
+#btn-add {
+  background-color: #4c84ff;
+  color: white;
+  font-size: 24px;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+/* Colunas do kanban */
+#kanban {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.coluna {
+  background-color: #1c2d59;
+  border-radius: 8px;
+  padding: 10px;
+  width: 23%;
+  min-width: 250px;
+}
+
+.titulo-coluna {
+  text-align: center;
+  padding: 8px;
+  border-radius: 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.titulo-coluna.amarelo { background-color: #f3b61f; }
+.titulo-coluna.azul { background-color: #4ca1ff; }
+.titulo-coluna.vermelho { background-color: #ff6b6b; }
+.titulo-coluna.verde { background-color: #5bd87f; }
+
+
+/*Card exemplo */
+.card {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.card h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  margin: 3px 0;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.menu-card {
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Painel ocupa a tela toda mas começa invisível */
+.adicionar {
+  display: none; /* escondido por padrão */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6); /* fundo escuro semi-transparente */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Caixa branca do painel */
+.adicionar .conteudo {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+/* Botão de fechar (X) */
+#fechar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
