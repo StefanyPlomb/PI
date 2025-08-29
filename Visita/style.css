@@ -1,0 +1,930 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    position: relative; /* Torna o body um contexto de posicionamento para elementos absolutos filhos */
+}
+/* Classes Renomeadas e seus estilos */
+/* Estilos do corpo */
+.body-estilo-base {
+    background-color: #000000;
+    color: #ffffff;
+}
+/* Estilos do cabeçalho */
+.cabecalho-estilo {
+    display: flex;
+    width: 100%;
+    padding: 1rem;
+    padding-top: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+    z-index: 10; /* Garante que o cabeçalho esteja acima de outros conteúdos */
+}
+.cabecalho-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.LiveTask-logo-home {
+    height: 10rem;
+}
+.div-botao-header {
+    display: flex;
+    justify-content: center;
+    position: absolute; /* Padrão para telas maiores: centralizado absolutamente */
+    left: 50%;
+    transform: translateX(-50%);
+}
+.navegacao-lista {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: nowrap; /* Impede que os botões quebrem em telas grandes */
+}
+.header-button {
+    background-color: #d88e00;
+    color: black;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    min-height: auto; /* Permite que a altura se ajuste naturalmente */
+}
+.header-button:hover {
+    background-color: #B8860B;
+}
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center; /* Centraliza o modal horizontalmente */
+    align-items: center; /* Centraliza o modal verticalmente */
+    z-index: 1000; /* Garante que o modal esteja acima de tudo */
+    font-family: 'Inter', sans-serif;
+}
+.modal-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+}
+.texto-modal{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.botao-usuario-estilo {
+    width: 5rem;
+    height: 5rem;
+    background-color: #4b5563;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+.botao-usuario-estilo:hover {
+    background-color: #60a5fa;
+}        
+.icone-usuario-estilo {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #ffffff;
+    transition: width 0.25s ease-in-out, height 0.25s ease-in-out;
+}        
+.botao-usuario-estilo:hover .icone-usuario-estilo {
+    width: 3rem;
+    height: 3rem;
+}
+.input-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+.input-group input {
+    width: 100%;
+    padding: 0.75rem 2.5rem 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+.input-group input:focus {
+    outline: none;
+    border-color: #1a73e8;
+}
+.input-group .icon {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    color: #999;
+}        
+.modal-button {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+    border: none;
+}        
+.modal-button.login-button {
+    background-color: #1a73e8;
+    color: white;
+}        
+.modal-button.login-button:hover {
+    background-color: #155bb5;
+}        
+.modal-button.register-button {
+    background-color: #f1f1f1;
+    color: #333;
+    border: 1px solid #ccc;
+}        
+.modal-button.register-button:hover {
+    background-color: #e0e0e0;
+}
+/* Seção do Lobo Laranja */
+.secao-lobo-laranja {
+    display: flex;
+    justify-content: center;
+    background-color: #000000;
+    position: absolute; /* Posiciona absolutamente para retirá-lo do fluxo, ou seja, ↓ */ 
+                        /* Fazer com que ele não interfira com os outros elementos */
+    width: 100%;
+    top: 0; /* Alinha ao topo do body */
+    z-index: 0; /* Coloca-o atrás de outros conteúdos */
+    overflow: hidden; /* Oculta a imagem que vai ser estorada */
+    height: 100vh; /* Faz com que ele cubra a altura total da viewport */
+}
+.imglobo{
+    width: 50rem;
+    height: 40rem;
+    object-fit: contain;
+    margin-top: 30vh; /* Isso ajuda a posicionar o lobo abaixo do cabeçalho */
+}
+
+/* Seção Hero */
+.secao-hero-estilo {
+    position: relative; /* relativo para habilitar z-index */
+    z-index: 5; /* Coloca-o acima da seção do lobo (z-index 0) */
+    background-color: #1b2c52;
+    margin-top: 50vh; /* Isso é o que mantém a seção clipando corretamente o lobo */
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box; /* Inclui o preenchimento nos cálculos de altura */
+}
+.hero-conteudo-principal {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    width: 100%;
+}
+.Otimizar-titulo {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.hero-subtitulo {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+.hero-botao-cta {
+    background-color: #f59e0b;
+    color: #000000;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+.hero-botao-cta:hover {
+    background-color: #d97706;
+}
+.hero-imagem-container {
+    position: relative;
+    z-index: 10;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    height: 20rem;
+}
+.hero-imagem-mockup {
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Seção "Tudo em um só lugar" */
+.secao-tudo-em-um {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: center;
+    position: relative; /* Garante que ele permaneça no fluxo normal e não fique oculto */
+    z-index: 5; /* Mantém-no acima do lobo */
+}
+.titulo-cards-secao {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    font-family: 'Libre Baskerville', serif;
+    color: #d88e00;
+}
+.cards-grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 2rem;
+}
+.card-item {
+background-color: #1f2937;
+padding: 1.5rem;
+border-radius: 0.5rem;
+display: flex;
+flex-direction: column; /* Faz uma coluna com a imagem no topo e o texto embaixo */
+align-items: center;    /* Alinha items horizontalmente */
+}
+.card-imagem {
+border-radius: 0.5rem;
+margin-bottom: 1rem;
+width: 70%;
+}
+.card-texto {
+text-align: left;
+width: 100%;
+}
+.card-texto strong { font-weight: 700; }
+
+/* Seção "Sobre Nós" */
+.secao-sobre-nos {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #111827;
+    position: relative; /* Garante que ele permaneça no fluxo normal e não fique oculto */
+    z-index: 5; /* Mantém-no acima do lobo */
+}
+.sobre-nos-conteudo-wrapper {
+    padding: 1rem;
+    width: 100%;
+}
+.nos-title {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-family: 'League Spartan', sans-serif;
+    color: #f2e8cd;
+}
+.sobre-nos-inner-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.sobre-nos-texto-div {
+    height: 40vh;
+    max-width: 40%;
+    padding: 1.5rem;
+    border-radius: 3rem;
+    background-color: #d88e00;
+    font-size: 10vh;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.sobre-nos-texto {
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-weight: bold;
+}
+.sobre-nos-imagem-container {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+.sobre-nos-imagem {
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Seção "Funcionalidades" */
+.secao-funcionalidades {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: center;
+}
+.titulo-funcionalidades {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    font-family: 'League Spartan', sans-serif;
+    color: #d88e00;
+}
+.carrossel-principal-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 56rem;
+}
+.carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.carrossel-item-estilo {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+}
+.carrossel-item-titulo {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.carrossel-item-grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 2rem;
+    align-items: flex-start;
+}
+.carrossel-item-imagem {
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+.carrossel-item-texto-container {
+    text-align: left;
+}
+.carrossel-item-subtitulo {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+.carrossel-item-lista {
+    list-style-type: disc;
+    list-style-position: inside;
+    margin-bottom: 1rem;
+}
+.carrossel-item-lista-sem-margem {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+.carousel-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.carousel-arrow.left { left: 10px; }
+.carousel-arrow.right { right: 10px; }
+.carrossel-dots-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.dot.active { background-color: #717171; }
+
+/* Seção "Parcerias" */
+.secao-parcerias {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: center;
+    background: linear-gradient(to top, rgb(53,51,205,0.28), rgb(0,0,0,0.28));
+    position: relative; /* Garante que ele permaneça no fluxo normal e não fique oculto */
+    z-index: 5; /* Mantém-no acima do lobo */
+}
+.titulo-parcerias {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+.parcerias-container-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+.parcerias-linha-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 11rem;
+    margin-left: 5rem;
+}
+.parceria-botao {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease-in-out;
+}
+.parceria-botao:hover {
+    transform: scale(1.1);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.parcerias-linha-flex-topo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 11rem;
+    margin-top: 1.5rem;
+    margin-right: 10rem;
+}
+.parceria-botao2 {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease-in-out;
+}
+.parceria-botao2:hover {
+    transform: scale(1.1);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.parceria-logo {
+    background-color: #ffffff;
+    width: 5rem;
+    height: 5rem;
+    object-fit: fill;
+    border-radius: 50%;
+}
+
+/* Seção "Trabalhe Conosco" */
+.secao-trabalhe-conosco {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: center;
+    position: relative; /* Garante que ele permaneça no fluxo normal e não fique oculto */
+    z-index: 5; /* Mantém-no acima do lobo */
+}
+.titulo-trabalhe-conosco {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: left;
+    font-family: 'Libre Baskerville', serif;
+    color: #d88e00;
+}
+.trabalhe-conosco-conteudo {
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 4px;
+    border-color: #fdfaec;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+.trabalhe-conosco-texto {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    margin-bottom: 2rem;
+}
+.trabalhe-conosco-botao {
+    background-color: #f59e0b;
+    color: #000000;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+.trabalhe-conosco-botao:hover {
+    background-color: #d97706;
+}
+
+/* Seção de Contato (oculta) */
+.secao-contato-oculta {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: center;
+    background-color: #111827;
+    display: none;
+}
+.titulo-contato {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+.contato-texto {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+.contato-link {
+    color: #60a5fa;
+    transition: text-decoration 0.3s ease;
+}
+.contato-link:hover { text-decoration: underline; }
+
+/* Rodapé */
+.rodape-estilo {
+    background-color: #000000;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: #9ca3af;
+    position: relative; /* Garante que ele permaneça no fluxo normal e não fique oculto */
+    z-index: 5; /* Mantém-no acima do lobo */
+}
+.rodape-grid-container {
+    max-width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 2rem;
+    border-bottom-width: 1px;
+    border-color: #374151;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+}
+.rodape-coluna-logo-redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.rodape-logo {
+    height: 7rem;
+    margin-bottom: 1rem;
+}
+.rodape-redes-sociais {
+    display: flex;
+    gap: 1rem;
+}
+.rodape-icone-social {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 9999px;
+    background-color: #4b5563;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+.rodape-icone-social:hover {
+    background-color: #4a5568;
+}
+.rodape-icone-svg {
+    width: 1rem;
+    height: 1rem;
+    color: #ffffff;
+}
+.rodape-coluna-texto1 {
+    text-align: left;
+    border-right: 2px solid white;
+}
+.rodape-coluna-texto2 {
+    text-align: left;
+    border-right: 2px solid white;
+}
+.rodape-coluna-texto3 {
+    text-align: left;
+}
+.rodape-titulo-coluna{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    border-right: #fdfaec;
+}
+.rodape-link {
+    color: #9ca3af;
+    transition: text-decoration 0.3s ease;
+}
+.rodape-link:hover { text-decoration: underline; }
+.rodape-copyright {
+    text-align: center;
+}
+
+/* Base styles for larger screens that might be overridden by media queries */
+.secao-hero-estilo {
+    flex-direction: row;
+}
+.hero-conteudo-principal {
+    width: 50%;
+}
+.hero-imagem-container {
+    margin-top: 0;
+    width: 50%;
+}
+.sobre-nos-texto{
+    font-size: 1.2rem;
+}
+.cards-grid-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.secao-sobre-nos {
+    flex-direction: row;
+}
+.sobre-nos-inner-flex {
+    flex-direction: row;
+}
+.carrossel-item-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.rodape-grid-container {
+    grid-template-columns: repeat(4, minmax(0, 1fr)); 
+}
+.rodape-coluna-logo-redes { 
+    align-items: flex-start; 
+}
+
+/* Media Queries */
+
+@media (max-width: 1840px) {    
+    /* Ajusta o espaçamento para as parcerias para permitir 3 itens por linha para telas <= 1840px */
+    .parcerias-linha-flex,
+    .parcerias-linha-flex-topo {
+        gap: 1rem; /* Espaçamento reduzido para mais itens por linha */
+        margin-left: 0; /* Remove margens específicas se elas interferirem com o centramento/quebra */
+        margin-right: 0;
+        justify-content: center; /* Garante que os itens estejam centralizados */
+    }
+}
+
+@media (max-width: 1091px){
+    .sobre-nos-texto{
+        font-size: 1.2rem;
+    }
+    .hero-imagem-container {
+        padding-left: 16px;
+}
+}
+
+@media (max-width: 876px) {
+    .secao-hero-estilo {
+        flex-direction: column;
+        margin-top: 25rem;
+        gap:16px;
+    }
+    /* O padding-top do body foi removido conforme solicitado */
+    .cabecalho-estilo {
+        flex-direction: column; /* Empilha logo, navegação e ícone de usuário verticalmente */
+        align-items: center; /* Centraliza os itens horizontalmente */
+        padding-top: 1rem; /* Ajusta o padding superior para telas menores */
+    }
+
+    .div-botao-header {
+        position: static; /* Remove o posicionamento absoluto, colocando-o de volta no fluxo */
+        left: auto;
+        transform: none;
+        margin-top: 1rem; /* Adiciona espaçamento abaixo do logo */
+        width: 100%; /* Permite que o container da navegação ocupe a largura total */
+        justify-content: center; /* Centraliza os itens de navegação dentro do seu container */
+    }
+
+    .navegacao-lista {
+        flex-wrap: wrap; /* Permite que os botões de navegação quebrem em múltiplas linhas */
+        justify-content: center; /* Centraliza os botões quando eles quebram */
+        gap: 0.5rem; /* Reduz o espaçamento entre os botões para melhor quebra */
+    }
+
+    .botao-usuario-estilo {
+        margin-top: 1rem; /* Adiciona espaçamento abaixo da navegação */
+    }
+
+    .LiveTask-logo-home {
+        height: 8rem; /* Opcional: Reduz o tamanho do logo para telas menores */
+    }
+    .secao-lobo-laranja {
+        pointer-events: none; /* Permite que cliques passem para elementos atrás dele */
+    }
+
+    .parcerias-linha-flex,
+    .parcerias-linha-flex-topo {
+        gap: 1rem; /* Espaçamento reduzido para mais itens por linha */
+        margin-left: 0; /* Remove margens específicas se elas interferirem com o centramento/quebra */
+        margin-right: 0;
+        justify-content: center; /* Garante que os itens estejam centralizados */
+    }
+}
+
+@media (max-width: 767px) {
+    .rodape-grid-container {
+        /* Define um grid com 3 colunas para o conteúdo de texto */
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        /* Ajusta o espaçamento entre as colunas */
+        gap: 1rem;
+    }
+
+    .rodape-coluna-logo-redes {
+        /* Faz com que a coluna do logo e redes sociais ocupe todas as 3 colunas */
+        grid-column: 1 / -1; /* Inicia na primeira linha e vai até o final da última */
+        /* Centraliza o conteúdo (logo e ícones) dentro desta coluna */
+        align-items: center;
+        /* Adiciona uma margem inferior para separar do conteúdo abaixo */
+        margin-bottom: 1.5rem;
+    }
+
+    .rodape-coluna-texto {
+        /* Garante que o texto dentro das colunas esteja centralizado, se necessário */
+        text-align: center;
+    }
+
+    .rodape-coluna-texto ul {
+        /* Remove paddings e margins padrão de listas para um alinhamento limpo */
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .rodape-titulo-coluna {
+        /* Garante que o título da coluna esteja alinhado ao topo */
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .sobre-nos-texto{
+        font-size: 0.9rem;
+    }
+    .rodape-grid-container {
+        /* Muda o grid para ter 2 colunas */
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        /* Ajusta o espaçamento entre as colunas */
+        gap: 1rem;
+    }
+
+    .rodape-coluna-logo-redes {
+        /* Faz com que a coluna do logo e redes sociais ocupe ambas as 2 colunas */
+        grid-column: 1 / -1;
+        /* Centraliza o conteúdo (logo e ícones) dentro desta coluna */
+        align-items: center;
+        /* Adiciona uma margem inferior para separar do conteúdo abaixo */
+        margin-bottom: 1.5rem;
+    }
+
+    .rodape-coluna-texto {
+        /* Garante que o texto dentro das colunas esteja centralizado */
+        text-align: center;
+    }
+
+    /* Regra específica para a coluna "Legal" em telas <= 600px */
+    .rodape-coluna-texto:last-of-type {
+        /* Faz com que a coluna "Legal" ocupe ambas as 2 colunas quando ela se quebra para a próxima linha */
+        grid-column: 1 / -1;
+        /* Garante que o conteúdo dentro dela (títulos e links) esteja centralizado */
+        text-align: center;
+    }
+
+    .rodape-coluna-texto ul {
+        /* Remove paddings e margins padrão de listas para um alinhamento limpo */
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .rodape-titulo-coluna {
+        /* Garante que o título da coluna esteja alinhado ao topo */
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 463px) {
+    .sobre-nos-texto{
+        font-size: 0.6rem;
+    }
+
+}
+
+@media (max-width: 440px) {
+    .secao-hero-estilo {
+        flex-direction: column;
+        margin-top: 15rem;
+    }
+    .div-botao-header {
+        flex-direction: column; /* Empilha os botões verticalmente */
+        align-items: center; /* Centraliza os botões empilhados */
+        margin-top: 1.5rem;
+    }
+    .navegacao-lista {
+        gap: 1rem; /* Reduz o espaçamento para botões empilhados */
+        flex-direction: column; /* Garante que os itens da lista se empilhem */
+    }
+    .header-button {
+        padding: 0.5rem 0.8rem; /* Ajusta o padding para botões menores */
+    }
+    .sobre-nos-texto{
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 390px) {
+    .secao-hero-estilo {
+        flex-direction: column;
+        margin-top: 20rem;
+    }
+    .div-botao-header {
+        margin-top: 1rem; /* Ajusta a margem para telas ainda menores */
+    }
+    .navegacao-lista {
+        gap: 1rem; /* Reduz ainda mais o espaçamento */
+    }
+    .header-button {
+        font-size: 0.8rem;
+    }
+    .LiveTask-logo-home {
+        height: 6rem; /* Diminui o logo para telas muito pequenas */
+    }
+    .botao-usuario-estilo {
+        padding: 0.5rem;
+        width: 4rem;
+        height: 4rem;
+    }
+    .icone-usuario-estilo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+    .sobre-nos-texto{
+        font-size: 0.6rem;
+    }
+}

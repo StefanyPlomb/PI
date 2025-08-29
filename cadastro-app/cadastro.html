@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - LifeTask</title>
+    <link rel="stylesheet" href="cadastro.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Libre+Baskerville&family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cadastro-overlay">
+        <form class="cadastro-container">
+            <div class="cadastro-avatar"><img src="https://icones.pro/wp-content/uploads/2021/02/icone-utilisateur.png" alt="Simbolo-Usuario"></div>
+            <h2 class="cadastro-title">Cadastro</h2>
+            <div class="cadastro-input-group">
+                <span class="cadastro-input-icon">
+                    <div class="cadastro-icon cadastro-icon-user"></div>
+                </span>
+                <input type="text" class="cadastro-input" placeholder="Nome completo" required>
+            </div>
+            <div class="cadastro-input-group">
+                <span class="cadastro-input-icon">
+                    <div class="cadastro-icon cadastro-icon-email"></div>
+                </span>
+                <input type="email" class="cadastro-input" placeholder="Email" required>
+            </div>
+            <div class="cadastro-input-group">
+                <span class="cadastro-input-icon">
+                    <div class="cadastro-icon cadastro-icon-password"></div>
+                </span>
+                <input type="password" class="cadastro-input" placeholder="Senha" required>
+            </div>
+            <div class="cadastro-input-group">
+                <span class="cadastro-input-icon">
+                    <div class="cadastro-icon cadastro-icon-password"></div>
+                </span>
+                <input type="password" class="cadastro-input" placeholder="Confirmar senha" required>
+            </div>
+            <div class="cadastro-checkbox-group">
+                <input type="checkbox" class="cadastro-checkbox" id="termos" required>
+                <label for="termos">Aceito os <a href="#" class="cadastro-link-termos">termos de uso</a></label>
+            </div>
+            <a href="index.html" class="cadastro-link">Esqueceu a senha? Mudar</a>
+            <button type="submit" class="cadastro-btn">Cadastrar</button><br><br>
+            <a href="index.html" class="cadastro-link">Já tem uma conta? Entrar</a>
+        </form>
+    </div>
+</body>
+</html>

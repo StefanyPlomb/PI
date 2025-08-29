@@ -1,0 +1,161 @@
+body {
+    min-height: 100vh;
+    background-image: url('img/FundoMontanha.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Inter', sans-serif;
+}
+
+.cadastro-overlay {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.cadastro-container {
+    background: rgba(30, 30, 30, 0.85);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.cadastro-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem auto;
+    border: 4px solid #000;
+    position: relative;
+    img{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        background-color: white;
+    }
+}
+
+.cadastro-avatar::before {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #fff;
+    margin: auto;
+}
+
+.cadastro-title {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.cadastro-input-group {
+    position: relative;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.cadastro-input {
+    width: 100%;
+    padding: 0.75rem 2.5rem 0.75rem 3rem;
+    border-radius: 999px;
+    border: none;
+    background: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #6B7280;
+    outline: none;
+    box-sizing: border-box;
+    align-self: center;
+    justify-content: center;
+}
+
+.cadastro-input-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.cadastro-icon {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.cadastro-icon-user::before {
+    content: "👤";
+}
+.cadastro-icon-email::before {
+    content: "✉️";
+}
+.cadastro-icon-password::before {
+    content: "🔒";
+}
+
+.cadastro-checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.cadastro-checkbox {
+    accent-color: #d88e00;
+    margin-right: 0.5rem;
+}
+
+.cadastro-link-termos {
+    text-decoration: underline;
+    color: #d88e00;
+}
+
+.cadastro-btn {
+    background: #d88e00;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 999px;
+    padding: 0.75rem 0;
+    width: 100%;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.cadastro-btn:hover {
+    background: #b36f00;
+}
+
+.cadastro-link {
+    color: #fff;
+    font-size: 0.95rem;
+    text-decoration: underline;
+    margin-bottom: 1rem;
+    display: block;
+    text-align: right;
+}
