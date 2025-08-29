@@ -210,32 +210,14 @@ body {
     font-weight: 700;
     margin-bottom: 1rem;
 }
-.hero-subtitulo {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-    margin-bottom: 1.5rem;
-}
-.hero-botao-cta {
-    background-color: #f59e0b;
-    color: #000000;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    border-radius: 0.5rem;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-}
-.hero-botao-cta:hover {
-    background-color: #d97706;
-}
+
 .hero-imagem-container {
     position: relative;
     z-index: 10;
-    margin-top: 2rem;
+    margin-top: 2%;
     display: flex;
     justify-content: center;
-    height: 20rem;
+    height: 35rem;
 }
 .hero-imagem-mockup {
     border-radius: 0.5rem;
