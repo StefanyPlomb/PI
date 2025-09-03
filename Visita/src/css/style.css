@@ -50,12 +50,18 @@ body {
 }
 .header-button {
     background-color: #d88e00;
-    color: black;
+    color: white;
     padding: 0.75rem 1.5rem;
     border-radius: 9999px;
     font-weight: 600;
     transition: background-color 0.3s ease;
     min-height: auto; /* Permite que a altura se ajuste naturalmente */
+    width: 250px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 80px;
 }
 .header-button:hover {
     background-color: #B8860B;
