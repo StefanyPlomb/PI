@@ -24,6 +24,7 @@ body {
     width: 100%;
     padding: 1rem;
     padding-top: 2rem;
+    padding-right: 6rem;    
     justify-content: space-between;
     align-items: center;
     position: relative;
@@ -58,7 +59,7 @@ body {
     background-color: #d88e00;
     color: white;
     padding: 0.75rem 1.5rem;
-    border-radius: 9999px;
+    border-radius: 9999px;  
     font-weight: 600;
     transition: background-color 0.3s ease;
     min-height: auto; /* Permite que a altura se ajuste naturalmente */
@@ -99,30 +100,31 @@ body {
     margin-bottom: 1.5rem;
     text-align: center;
 }
+
 .botao-usuario-estilo {
     width: 5rem;
     height: 5rem;
-    background-color: #4b5563;
-    border-radius: 9999px;
+    background-color: #000000;
+    border-radius: 9999px;      
     display: flex;
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s ease;
-    border: none;
-    cursor: pointer;
+    cursor: pointer;    
+    border: 3px solid white;    
 }
 .botao-usuario-estilo:hover {
-    background-color: #60a5fa;
+    background-color: #d88e00;
 }        
 .icone-usuario-estilo {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
     color: #ffffff;
     transition: width 0.25s ease-in-out, height 0.25s ease-in-out;
 }        
 .botao-usuario-estilo:hover .icone-usuario-estilo {
     width: 3rem;
-    height: 3rem;
+    height: 3rem;       
 }
 .input-group {
     position: relative;
