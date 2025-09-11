@@ -1,19 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/Style.css"/>
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pendência de Estoque</title>
+  <link rel="stylesheet" href="acoes.css" />
 </head>
-<body>
-    <main>
-        <div class="conteudo">
-            <span id="fechar">&times;</span>
-            <h2>Adicionar Nova Tarefa:</h2>
-            <textarea placeholder="Digite seu texto..."></textarea>
-            <button>Salvar</button>
+ <body>
+  <main class="adicionar">
+    <div class="conteudo">
+      <span id="fechar">&times;</span>
+ 
+      <div class="conteudo-interno">
+        <div class="modal-left">
+          <h2>Adicionar Nova Tarefa:</h2>
+          <textarea class="caixa-textarea" placeholder="Digite seu texto..."></textarea>
+          <button class="button-tarefa">Salvar</button>
         </div>
-    </main>
+ 
+        <div class="modal-right">
+          <div class="info-text">
+            <p><strong>Solicitante:</strong> Equipe de Desenvolvimento</p>
+            <p><strong>Empresa:</strong> Santo Antônio - BA</p>
+            <p><strong>Data de envio:</strong> 15/05/2025 15:32:53</p>
+            <p><strong>Última edição:</strong> 03/06/2025 13:42:06</p>
+            <p><strong>Prazo:</strong> 30/09/2025 23:59:59</p>
+            <p><strong>Prazo:</strong> 30/09/2025 23:59:59</p>
+            <p><strong>Prazo:</strong> 30/09/2025 23:59:59</p>
+            <p><strong>Prazo:</strong> 30/09/2025 23:59:59</p>
+            <p><strong>Prazo:</strong> 30/09/2025 23:59:59</p>      
+            <p><strong>Prazo:</strong> 30/09/2025 23:59:59</p>
+          </div>        
+          <button class="button-tarefa atualizar">Atualizar</button>
+        </div>
+      </div>
+ 
+    </div>
+  </main>
 </body>
 </html>

@@ -1,5 +1,3 @@
-/* style.css */
-
 /* Reset básico */
 * {
   margin: 0;
@@ -9,120 +7,152 @@
 
 /* Corpo da página */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  padding: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6fb;
+  padding: 20px;
+  color: #333;
+}
+/* Header */
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 25px;
+  padding: 0 20px;  
 }
 
-/* Barra superior */
-/* HEADER principal */
-#topo {
+/* Sidebar */
+.sidebar {
+  width: 220px;
   background-color: #1c2d59;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px 5px;
-  border-radius: 5px;
-  margin-bottom: 5%;
+  color: #fff;
+  height: 100vh;
+  padding: 30px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
 }
 
-/* Menus laterais */
-.menu-esquerdo,
-.menu-direito {
-  display: flex;
-  gap: 5px;
+.sidebar h2 {
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 1px;
 }
 
-.icone {
-  background: none;
-  border: none;
-  padding: 1px;
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  padding: 12px 0;
   cursor: pointer;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
 }
 
-.icone img {
-  object-fit: contain;
-  transition: transform 0.2s ease;
+.sidebar ul li:hover {
+  background-color: #2b3e87;
 }
 
-.icone img:hover {
-  transform: scale(1.2);
-}
-
-/* Logo central com nome */
-.logo-central {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 22px;
-  font-weight: bold;
-}
-
-.logo-central span {
-  color: #8dcaff;
+/* Main */
+.main {
+  margin-left: 240px;
+  padding: 20px 40px;
+  min-height: 100vh;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 
-/* Filtros superiores */
+.header input {
+  padding: 10px 15px;
+  width: 320px;
+  border-radius: 8px;
+  border: 1.5px solid #ccc;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+}
+
+.header input:focus {
+  outline: none;
+  border-color: #3d6dd8;
+}
+
+/* Menu de filtros */
 #menu-filtros {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin: 20px 0;
-  text-decoration: none;
+  gap: 15px;
+  margin-bottom: 30px;
 }
 
 .filtro {
-  padding: 8px 16px;
-  border-radius: 20px;
-  border: none;
-  background-color: #ccc;
-  font-weight: bold;
+  padding: 10px 22px;
+  border-radius: 25px;
+  background-color: #e0e0e0;
+  font-weight: 700;
   cursor: pointer;
-  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: none;
+  color: #333;
+}
+
+.filtro:hover {
+  background-color: #c0c7f8;
 }
 
 .filtro.ativo {
   background-color: #3d6dd8;
-  color: white;
-  text-decoration: none;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(61, 109, 216, 0.5);
 }
 
-#abrirPainel{
+#abrirPainel {
   background-color: #4c84ff;
   color: white;
-  font-size: 24px;
+  font-size: 28px;
   border: none;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-/* Colunas do kanban */
+#abrirPainel:hover {
+  background-color: #365fcf;
+}
+
+/* Kanban */
 #kanban {
   display: flex;
   justify-content: space-between;
-  gap: 10px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
 .coluna {
   background-color: #1c2d59;
-  border-radius: 8px;
-  padding: 10px;
+  border-radius: 12px;
+  padding: 15px;
   width: 23%;
-  min-width: 250px;
+  min-width: 280px;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .titulo-coluna {
   text-align: center;
-  padding: 8px;
-  border-radius: 10px;
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: white;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  user-select: none;
 }
 
 .titulo-coluna.amarelo { background-color: #f3b61f; }
@@ -130,77 +160,135 @@ body {
 .titulo-coluna.vermelho { background-color: #ff6b6b; }
 .titulo-coluna.verde { background-color: #5bd87f; }
 
-
-/*Card exemplo */
+/* Cards */
 .card {
   background-color: #f9f9f9;
-  border-radius: 12px;
-  padding: 15px;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-  margin-bottom: 10px;
-  position: relative;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  margin-bottom: 15px;
+  color: #222;
+  transition: transform 0.2s ease;
+  cursor: grab;
+}
+
+.card:hover {
+  transform: translateY(-4px);
 }
 
 .card h3 {
-  font-size: 16px;
+  font-size: 18px;
   margin-bottom: 10px;
+  font-weight: 700;
 }
 
 .card p {
-  font-size: 14px;
-  margin: 3px 0;
+  font-size: 15px;
+  margin: 5px 0;
+  color: #555;
 }
 
 .card-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .avatar {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #3d6dd8;
 }
 
 .menu-card {
   border: none;
   background: none;
-  font-size: 20px;
+  font-size: 22px;
   cursor: pointer;
+  color: #888;
+  transition: color 0.3s ease;
 }
 
-/* Painel ocupa a tela toda mas começa invisível */
-.adicionar {
-  display: none; /* escondido por padrão */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.6); /* fundo escuro semi-transparente */
-  justify-content: center;
-  align-items: center;
-}
-
-/* Caixa branca do painel */
-.adicionar .conteudo {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  width: 400px;
-  max-width: 90%;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  position: relative;
+.menu-card:hover {
+  color: #3d6dd8;
 }
 
 /* Botão de fechar (X) */
 #fechar {
   position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 22px;
+  top: 12px;
+  right: 20px;
+  font-size: 24px;
   cursor: pointer;
+  color: #888;
+  transition: color 0.3s ease;
 }
 
+#fechar:hover {
+  color: #ff6b6b;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+  .coluna {
+    width: 48%;
+  }
+  .main {
+    margin-left: 0;
+    padding: 20px;
+  }
+  .sidebar {
+    position: relative;
+    height: auto;
+    width: 100%;
+    padding: 20px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  #kanban {
+    flex-direction: column;
+  }
+  .coluna {
+    width: 100%;
+    min-width: 100%;
+  }
+  .header input {
+    width: 100%;
+  }
+}
+
+.cabecalho-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-usuario-estilo {
+    width: 4rem;
+    height: 4rem;
+    background-color: #000000;
+    border-radius: 100px;      
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    transition: background-color 0.3s ease;
+    cursor: pointer;    
+    border: 3px solid white;    
+}
+.botao-usuario-estilo:hover {
+    background-color: #d88e00;
+}        
+.icone-usuario-estilo {
+    width: 2rem;
+    height: 2rem;
+    color: #ffffff;
+    transition: width 0.25s ease-in-out, height 0.25s ease-in-out;  
+}        
+.botao-usuario-estilo:hover .icone-usuario-estilo {
+    width: 3rem;
+    height: 3rem;       
+}

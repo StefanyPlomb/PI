@@ -6,45 +6,32 @@
   <title>LiveTask - Painel</title>
   <link rel="stylesheet" href="CSS/Style.css"/>
 </head>
-
-<header id="topo">
-  <div class="menu-esquerdo">
-    <button class="icone" title="Configurações">
-      <img src="IMG/Configurações_icon.png" width="70px"   alt="Configurações" />
-    </button>
-    <button class="icone" title="Gráficos">
-      <img src="IMG/Grafico_Icon.png" width="70px"  alt="Gráficos" />
-    </button>
-    <button class="icone" title="Relatórios">
-      <img src="IMG/Relatório_Icon.png" width="90px" alt="Relatórios" />
-    </button>
-    <button class="icone" title="Filtros">
-      <img src="IMG/Filtro_Icon.png" width="90px" alt="Filtros" />
-    </button>
-  </div>
-
-   <div class="logo-central">
-    <img src="IMG/logo_SVG.png"  width="150px"   alt="Logo do LiveTask" />
-  </div>
-
-  <div class="menu-direito">
-    <button class="icone" title="Favoritos">
-      <img src="IMG/Favoritos_Icon.png" width="90px" alt="Favoritos" />
-    </button>
-    <button class="icone" title="Salvos">
-      <img src="IMG/Salvos_Icon.png" width="90px" alt="Salvos" />
-    </button>
-    <button class="icone" title="Notificações">
-      <img src="IMG/Notificações_Icon.png" width="90px" alt="Notificações" />
-    </button>
-    <button class="icone" title="Acessibilidade">
-      <img src="IMG/Acessibilidade_Icon.png" width="90px" alt="Acessibilidade" />
-    </button>
-  </div>
-
 </header>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+  <div>
+    <img src="IMG/logo_SVG.png" width="175px" alt="Logo do LiveTask"/>
+  </div>
+    <ul>
+      <li>Gráficos</li>
+      <li>Relatórios</li>
+      <li>Filtros</li>
+      <li>Favoritos</li>
+      <li>Salvos</li>  
+      <li>Acessibilidade</li>  
+    </ul>
+  </div>
 
-
+  <!-- Main -->
+  <div class="main">
+  <div class="header">
+  <div class="cabecalho-logo-container">
+    <button class="botao-usuario-estilo" id="open-modal-button">
+      <img src="/Visita/img/icone-usuario.webp" alt="Usuário" class="icone-usuario-estilo">
+    </button>   
+  </div>
+</div>
   <main>
     <section id="menu-filtros">
       <button class="filtro"><a href="Sistema.html">Entradas</a></button>
@@ -55,8 +42,7 @@
     <div id="adicionar" class="adicionar">
       <!-- Conteúdo será carregado aqui via JS -->
     </div>
-    
-    </section>
+    </section>    
 
   <section id="kanban">
     <div class="coluna" id="hoje">
