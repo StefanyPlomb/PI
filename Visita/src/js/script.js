@@ -37,6 +37,8 @@ document.getElementById('register-button').addEventListener('click', function() 
 });
 
 // JavaScript para o Carrossel
+
+// Variáveis para o carrossel
 const carousel = document.getElementById('funcionalidades-carousel');
 const prevButton = document.getElementById('prev-slide');
 const nextButton = document.getElementById('next-slide');
@@ -44,8 +46,9 @@ const carouselItems = document.querySelectorAll('.carrossel-item-estilo');
 const dots = document.querySelectorAll('.dot');
 let currentIndex = 0;
 
+// Função para atualizar o carrossel
 function updateCarousel() {
-    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+    carousel.style.transform = `translateX(-${currentIndex * 50}%)`;
     dots.forEach((dot, index) => {
         if (index === currentIndex) {
             dot.classList.add('active');
@@ -57,13 +60,42 @@ function updateCarousel() {
 
 // Navegação com setas
 prevButton.addEventListener('click', () => {
+    // Resetar o timer ao clicar na seta
+    clearInterval(autoRotationInterval);
+    // Iniciar um novo timer
+    const newInterval = setInterval(autoRotate, 5000);
+    // Armazenar a referência do intervalo em uma variável global se necessário
+    autoRotationInterval = newInterval;
+    // Atualizar o carrossel
     currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
     updateCarousel();
 });
 
 nextButton.addEventListener('click', () => {
+    // Resetar o timer ao clicar na seta
+    clearInterval(autoRotationInterval);
+    // Iniciar um novo timer
+    const newInterval = setInterval(autoRotate, 5000);
+    // Armazenar a referência do intervalo em uma variável global se necessário
+    autoRotationInterval = newInterval;
+    // Atualizar o carrossel
     currentIndex = (currentIndex + 1) % carouselItems.length;
     updateCarousel();
 });
 
-updateCarousel(); // Inicializa o carrossel
+// Inicializa o carrossel
+updateCarousel();
+
+// Autorrrotação automática
+function autoRotate() {
+    currentIndex = (currentIndex + 1) % carouselItems.length;
+    updateCarousel();
+}
+
+// Iniciar a rotação automática a cada 5 segundos
+let autoRotationInterval = setInterval(autoRotate, 5000);
+
+// Parar a rotação quando o usuário interagir com o carrossel
+carousel.addEventListener('click', () => {
+    clearInterval(autoRotationInterval);
+});
