@@ -33,7 +33,7 @@ loginButton.addEventListener('click', () => {
 });
 
 document.getElementById('register-button').addEventListener('click', function() {
-    window.location.href = '../../cadastro-app/src/html/cadastro.html';
+    window.location.href = '../HTML/cadastro.html';
 });
 
 // JavaScript para o Carrossel

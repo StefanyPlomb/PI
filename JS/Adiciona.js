@@ -17,7 +17,7 @@ fechar.addEventListener("click", () => {
 // Função para carregar o conteúdo de acoes.html
 function carregarModal() {
     const requisicaoModalAcoes = new XMLHttpRequest();
-    requisicaoModalAcoes.open("GET", "acoes.html", true);
+    requisicaoModalAcoes.open("GET", "Adicionar.html", true);
     requisicaoModalAcoes.onreadystatechange = function () {
         if (requisicaoModalAcoes.readyState === 4 && requisicaoModalAcoes.status === 200) {
             // Remove o conteúdo antigo da div #adicionar
