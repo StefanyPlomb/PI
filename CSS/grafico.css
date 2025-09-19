@@ -1,0 +1,172 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f4f6;
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+ width: 220px;
+  background-color: #1c2d59;
+  color: #fff;
+  height: 100vh;
+  padding: 30px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+ 
+}
+.sidebar  ul  {
+  list-style: none;
+}
+
+a{
+ text-decoration: none;
+ color: white;
+}
+.sidebar ul li {
+  padding: 12px 0;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar ul li button{
+  border-color: transparent;
+  background-color: transparent;
+  color: white;
+}
+
+.sidebar ul li:hover {
+  background-color: #2b3e87;
+}
+
+.main {
+  flex: 1;
+  padding-left: 250px;
+}
+
+
+
+/* Header */
+.header {
+  display: flex;
+  justify-content:flex-end;
+  align-items: center;
+  margin-right: 25px;
+  margin-bottom: 25px;      
+  margin-top: 10px;
+}
+.header input {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 300px;     
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 30px;  
+}
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.card h3 {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+.card p {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 5px 0 0;
+}
+
+
+/* Charts */
+.charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  height: 50px;
+  width: 50px;
+}
+.chart-container {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 750px;         
+  height: 750px;
+  
+}
+
+#pieChart{
+    padding: 20px;
+}
+
+
+.cabecalho-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-usuario-estilo {
+    width: 4rem;
+    height: 4rem;
+    background-color: #000000;
+    border-radius: 100px;      
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    transition: background-color 0.3s ease;
+    cursor: pointer;    
+    border: 3px solid white;    
+}
+.botao-usuario-estilo:hover {
+    background-color: #d88e00;
+}        
+.icone-usuario-estilo {
+    width: 2rem;
+    height: 2rem;
+    color: #ffffff;
+    transition: width 0.25s ease-in-out, height 0.25s ease-in-out;  
+}        
+.botao-usuario-estilo:hover .icone-usuario-estilo {
+    width: 3rem;
+    height: 3rem;       
+} 
+
+.barChart{
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 870px;         
+  height: 750px;     
+}           
+
+#barChart{
+   margin-top: 50px;            
+}
+
+.barChart h3{       
+    margin-top: 50px;  
+}

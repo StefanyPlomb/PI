@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard de Protocolos</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="../CSS/grafico.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+  <div>
+    <img src="../SRC/IMG/logo_SVG.png" width="175px" alt="Logo do LiveTask"/>
+  </div>
+    <ul>
+      <a href="../HTML/Entrada.html"><li><button>Home</button></li></a>
+      <a href="#"><li><button>Relatórios</button></li></a>
+      <a href="#"><li><button>Filtros</button></li></a>
+      <a href="#"><li><button>Favoritos</button></li></a>
+      <a href="#"><li><button>Salvos</button></li></a>  
+      <a href="#"><li><button>Acessibilidade</button></li></a>    
+    </ul>
+  </div>
+
+  <!-- Main -->
+  <div class="main">  
+  <div class="header">
+  <div class="cabecalho-logo-container">
+    <button class="botao-usuario-estilo" id="open-modal-button">
+      <img src="../SRC/IMG/icone-usuario.webp" alt="Usuário" class="icone-usuario-estilo">
+    </button>   
+  </div>
+</div>
+ 
+    <!-- Cards -->
+    <div class="cards">
+      <div class="card" style="border-left: 5px solid #22c55e;">
+        <h3>Atendidos</h3>
+        <p>45</p>
+      </div>
+      <div class="card" style="border-left: 5px solid #3b82f6;">
+        <h3>Em andamento</h3>
+        <p>30</p>
+      </div>
+      <div class="card" style="border-left: 5px solid #86efac;">
+        <h3>Dentro do prazo</h3>
+        <p>50</p>
+      </div>
+      <div class="card" style="border-left: 5px solid #ef4444;">
+        <h3>Fora do prazo</h3>
+        <p>10</p>
+      </div>
+      <div class="card" style="border-left: 5px solid #9ca3af;">
+        <h3>Não iniciados</h3>
+        <p>20</p>
+      </div>
+      <div class="card" style="border-left: 5px solid #f97316;">
+        <h3>Urgentes</h3>
+        <p>5</p>
+      </div>
+    </div>
+ 
+    <!-- Charts -->
+    <div class="charts">
+      <div class="chart-container">
+        <h3>Distribuição dos Protocolos</h3>
+        <canvas id="pieChart"></canvas>
+      </div>
+      <div class="barChart">
+        <h3>Desempenho de Entregas</h3>
+        <canvas id="barChart"></canvas>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- Scripts -->
+  <script src="../JS/grafico.js"></script>
+</body>
+</html>
