@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Relatórios</title>
+  <link rel="stylesheet" href="/PI/CSS/relatorio.css">
+</head>
+<body>
+  <div class="sidebar">
+    <div>
+      <img src="/PI/SRC/IMG/logo_SVG.png" width="175px" alt="Logo do LiveTask"/>
+    </div>
+    <ul>
+      <a href="../HTML/Entrada.html"><li><button>Home</button></li></a>
+      <a href="../HTML/relatorio.html"><li><button>Relatórios</button></li></a>
+      <a href="#"><li><button>Filtros</button></li></a>
+      <a href="#"><li><button>Favoritos</button></li></a>
+      <a href="#"><li><button>Salvos</button></li></a>  
+      <a href="#"><li><button>Acessibilidade</button></li></a>    
+    </ul>
+  </div>
+
+  <main>
+    <div class="content">
+  <header>
+  <h1>Relatórios</h1>
+  <div class="filters">
+    <input type="text" id="searchInput" placeholder="Buscar relatório...">
+
+    <select id="statusFilter">
+      <option value="">Todos os Status</option>
+      <option value="finalizados">Projetos Finalizados</option>
+      <option value="atrasados">Projetos Fora do Prazo</option>
+      <option value="desempenho">Desempenho de Entregas</option>
+    </select>
+
+    <select id="responsavelFilter">
+      <option value="">Todos os Responsáveis</option>
+      <option value="Ana Silva">Ana Silva</option>
+      <option value="Carlos Souza">Carlos Souza</option>
+      <option value="João Pereira">João Pereira</option>
+      <option value="Mariana Costa">Mariana Costa</option>
+      <option value="Equipe A">Equipe A</option>
+      <option value="Equipe B">Equipe B</option>
+    </select>
+
+    <input type="date" id="dateFilter" />
+  </div>
+</header>
+
+      <!-- Projetos Finalizados -->
+      <section class="report-card" data-type="finalizados">
+        <h2>Projetos Finalizados</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Projeto</th>
+              <th>Responsável</th>
+              <th>Data de Conclusão</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sistema de Estoque</td>
+              <td>Ana Silva</td>
+              <td>05/09/2025</td>
+            </tr>
+            <tr>
+              <td>Website Institucional</td>
+              <td>Carlos Souza</td>
+              <td>10/09/2025</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Projetos Fora do Prazo -->
+      <section class="report-card" data-type="atrasados">
+        <h2>Projetos Fora do Prazo</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Projeto</th>
+              <th>Responsável</th>
+              <th>Prazo Original</th>
+              <th>Novo Prazo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>App Mobile</td>
+              <td>João Pereira</td>
+              <td>01/09/2025</td>
+              <td>20/09/2025</td>
+            </tr>
+            <tr>
+              <td>Dashboard Financeiro</td>
+              <td>Mariana Costa</td>
+              <td>08/09/2025</td>
+              <td>25/09/2025</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Desempenho de Entregas -->
+      <section class="report-card" data-type="desempenho">
+        <h2>Desempenho de Entregas</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Equipe</th>
+              <th>Entregas no Prazo</th>
+              <th>Entregas Atrasadas</th>
+              <th>Taxa de Sucesso</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Equipe A</td>
+              <td>15</td>
+              <td>2</td>
+              <td>88%</td>
+            </tr>
+            <tr>
+              <td>Equipe B</td>
+              <td>10</td>
+              <td>5</td>
+              <td>67%</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </main>
+
+  <script src="/PI/JS/relatorio.js"></script>
+</body>
+</html>

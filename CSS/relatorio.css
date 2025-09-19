@@ -1,0 +1,164 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f4f6;
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #1c2d59;
+  color: #fff;
+  height: 100vh;
+  padding: 30px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+ 
+}
+.sidebar  ul  {
+  list-style: none;
+}
+
+a{
+ text-decoration: none;
+ color: white;
+}
+.sidebar ul li {
+  padding: 12px 0;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar ul li button{
+  border-color: transparent;
+  background-color: transparent;
+  color: white;
+}
+
+.sidebar ul li:hover {
+  background-color: #2b3e87;
+}
+
+/* Conteúdo geral */
+main {
+  margin-left: 220px;
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  width: 100%;
+  padding: 20px 30px;
+}
+
+/* Ajustes na header e filtros */
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+header h1 {
+  color: #0d1b3d;
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
+.filters input[type="text"],
+.filters select,
+.filters input[type="date"] {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+  min-width: 140px;
+}
+
+.filters input[type="text"]:focus,
+.filters select:focus,
+.filters input[type="date"]:focus {
+  border-color: #0d1b3d;
+}
+
+/* Ajuste para responsividade: no mobile os filtros vão empilhar */
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .filters {
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .filters input[type="text"],  
+  .filters select,
+  .filters input[type="date"] {
+    min-width: 100%;
+  }
+}
+
+/* Cards */
+.report-card {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  margin-top: 20px;
+}
+
+/* Tabelas */   
+.report-card h2 {
+  margin-bottom: 15px;
+  color: #0d1b3d;
+  font-size: 1.3rem;                
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #0d1b3d;
+  color: white; 
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+  background: #f4f6fb;
+}
