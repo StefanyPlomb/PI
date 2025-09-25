@@ -6,12 +6,13 @@
     <title>Cadastro - LifeTask</title>
     <link rel="stylesheet" href="../css/cadastro.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Libre+Baskerville&family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="  https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 <body>
+        <button class="voltar-visita-btn"><a href="visita.html" >Voltar para a página inicial</a></button>
     <div class="cadastro-overlay">
         <form class="cadastro-container">
-            <div class="cadastro-avatar"><img src="https://icones.pro/wp-content/uploads/2021/02/icone-utilisateur.png" alt="Simbolo-Usuario"></div>
+            <div class="cadastro-avatar"><img src="  https://icones.pro/wp-content/uploads/2021/02/icone-utilisateur.png  " alt="Simbolo-Usuario"></div>
             <h2 class="cadastro-title">Cadastro</h2>
             <div class="cadastro-input-group">
                 <span class="cadastro-input-icon">
@@ -41,10 +42,16 @@
                 <input type="checkbox" class="cadastro-checkbox" id="termos" required>
                 <label for="termos">Aceito os <a href="#" class="cadastro-link-termos">termos de uso</a></label>
             </div>
-            <a href="index.html" class="cadastro-link">Esqueceu a senha? Mudar</a>
+            <!-- Botões para acionar os modais -->
+            <a href="#" id="open-forgot-from-register" class="cadastro-link">Esqueceu a senha?</a>
             <button type="submit" class="cadastro-btn">Cadastrar</button><br><br>
-            <a href="index.html" class="cadastro-link">Já tem uma conta? Entrar</a>
+            <a href="#" id="open-login-from-register" class="cadastro-link">Já tem uma conta? Entrar</a>
         </form>
     </div>
+
+    <!-- Contêiner para os modais carregados (opcional, o script pode injetar no body) -->
+    <div id="modais-container"></div>
+
+    <script src="../js/cadastro.js"></script>
 </body>
 </html>

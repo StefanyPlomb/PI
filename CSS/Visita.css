@@ -4,7 +4,6 @@
     font-weight: bold;
     font-style: normal;
 }
-
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: #000000;
@@ -13,14 +12,12 @@ body {
     padding: 0;
     position: relative; /* Torna o body um contexto de posicionamento para elementos absolutos filhos */
 }
-
 /* Classes Renomeadas e seus estilos */
 /* Estilos do corpo */
 .body-estilo-base {
     background-color: #000000;
     color: #ffffff;
 }
-
 /* Estilos do cabeçalho */
 .cabecalho-estilo {
     display: flex;
@@ -34,17 +31,14 @@ body {
     box-sizing: border-box;
     z-index: 10; /* Garante que o cabeçalho esteja acima de outros conteúdos */
 }
-
 .cabecalho-logo-container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 .LiveTask-logo-home {
     height: 10rem;
 }
-
 .div-botao-header {
     display: flex;
     justify-content: center;
@@ -52,7 +46,6 @@ body {
     left: 50%;
     transform: translateX(-50%);
 }
-
 .navegacao-lista {
     display: flex;
     list-style: none;
@@ -62,7 +55,6 @@ body {
     align-items: center;
     flex-wrap: nowrap; /* Impede que os botões quebrem em telas grandes */
 }
-
 .header-button {
     background-color: #d88e00;
     color: white;
@@ -78,11 +70,9 @@ body {
     align-items: center;
     margin: 80px;
 }
-
 .header-button:hover {
     background-color: #B8860B;
 }
-
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -95,7 +85,6 @@ body {
     align-items: center; /* Centraliza o modal verticalmente */
     z-index: 1000; /* Garante que o modal esteja acima de tudo */
 }
-
 .modal-container {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 2rem;
@@ -104,7 +93,6 @@ body {
     width: 90%;
     max-width: 400px;
 }
-
 .texto-modal{
     color: white;
     font-size: 1.5rem;
@@ -112,7 +100,6 @@ body {
     margin-bottom: 1.5rem;
     text-align: center;
 }
-
 .botao-usuario-estilo {
     width: 5rem;
     height: 5rem;
@@ -125,28 +112,23 @@ body {
     cursor: pointer;    
     border: 3px solid white;    
 }
-
 .botao-usuario-estilo:hover {
     background-color: #d88e00;
 }        
-
 .icone-usuario-estilo {
     width: 2.5rem;
     height: 2.5rem;
     color: #ffffff;
     transition: width 0.25s ease-in-out, height 0.25s ease-in-out;
 }        
-
 .botao-usuario-estilo:hover .icone-usuario-estilo {
     width: 3.5rem;
     height: 3.5rem;       
 }
-
 .input-group {
     position: relative;
     margin-bottom: 1.5rem;
 }
-
 .input-group input {
     width: 100%;
     padding: 0.75rem 2.5rem 0.75rem 1rem;
@@ -154,13 +136,15 @@ body {
     border-radius: 0.5rem;
     font-size: 1rem;
     transition: border-color 0.3s;
+    color: #000000; /* Adicionado: Cor do texto preta */
+    background-color: #ffffff; /* Opcional: Garante fundo branco */
 }
-
 .input-group input:focus {
     outline: none;
     border-color: #1a73e8;
+    /* Opcional: Adicionar sombra interna ou externa */
+    box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
 }
-
 .input-group .icon {
     position: absolute;
     top: 50%;
@@ -168,7 +152,6 @@ body {
     transform: translateY(-50%);
     color: #999;
 }        
-
 .modal-button {
     width: 100%;
     padding: 0.75rem;
@@ -180,26 +163,21 @@ body {
     transition: background-color 0.3s;
     border: none;
 }        
-
 .modal-button.login-button {
     background-color: #1a73e8;
     color: white;
 }        
-
 .modal-button.login-button:hover {
     background-color: #155bb5;
 }        
-
 .modal-button.register-button {
     background-color: #f1f1f1;
     color: #333;
     border: 1px solid #ccc;
 }        
-
 .modal-button.register-button:hover {
     background-color: #e0e0e0;
 }
-
 /* Seção do Lobo Laranja */
 .secao-lobo-laranja {
     display: flex;
@@ -213,14 +191,12 @@ body {
     overflow: hidden; /* Oculta a imagem que vai ser estorada */
     height: 100vh; /* Faz com que ele cubra a altura total da viewport */
 }
-
 .imglobo{
     width: 50rem;
     height: 40rem;
     object-fit: contain;
     margin-top: 30vh; /* Isso ajuda a posicionar o lobo abaixo do cabeçalho */
 }
-
 /* Seção Hero */
 .secao-hero-estilo {
     position: relative; /* relativo para habilitar z-index */
@@ -237,14 +213,12 @@ body {
     justify-content: center;
     box-sizing: border-box; /* Inclui o preenchimento nos cálculos de altura */
 }
-
 .hero-conteudo-principal {
     position: relative;
     z-index: 10;
     text-align: center;
     width: 100%;
 }
-
 .Otimizar-titulo {
     font-family: 'Horizon';
     font-size: 2.25rem;
@@ -252,7 +226,6 @@ body {
     font-weight: 700;
     margin-bottom: 1rem;
 }
-
 .hero-imagem-container {
     position: relative;
     z-index: 10;
@@ -261,18 +234,15 @@ body {
     justify-content: center;
     height: 35rem;
 }
-
 .hero-imagem-mockup {
     border-radius: 0.5rem;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
-
 /* Seção "Tudo em um só lugar" */
 .secao-tudo-em-um {
     padding-top: 4rem;
     z-index: 5;
 }
-
 .titulo-cards-secao {
     font-size: 2.9rem;
     line-height: 4rem;
@@ -282,7 +252,6 @@ body {
     color: #d88e00;
     text-align: center;
 }
-
 .borda-cards-container{
     padding-top: 5rem;
     border-right: 1px solid white;
@@ -291,7 +260,6 @@ body {
     margin-right: 20rem;
     margin-left: 20rem;
 }
-
 .cards-grid-container {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -302,7 +270,6 @@ body {
     margin-right: 5rem;
     margin-left: 5rem;
 }
-
 .card-item {
     position: relative;
     top: 6rem;
@@ -313,22 +280,18 @@ body {
     flex-direction: column;
     box-sizing: border-box;
 }
-
 .card-item-central {
     top: 8rem
 }
-
 .card-imagem {
     border-radius: 0.5rem;
     margin-bottom: 1rem;
     width: 100%;
 }
-
 .card-texto {
     text-align: left;
     width: 100%;
 }
-
 .span-tudo-um {
     display: inline-block;
     color: white;
@@ -338,7 +301,6 @@ body {
     line-height: 1.4rem;
     margin-bottom: 1.35rem;
 }
-
 .linha-separadora{
     border: 2px solid #d88e00;
     margin-top: 14rem;
@@ -346,7 +308,6 @@ body {
     margin-right: 25rem;
     margin-bottom: 2rem;
 }
-
 /* Seção "Sobre Nós" */
 .secao-sobre-nos {
     padding-top: 4rem;
@@ -361,12 +322,10 @@ body {
     position: relative; /* Garante que ele permaneça no fluxo normal e não fique oculto */
     z-index: 5; /* Mantém-no acima do lobo */
 }
-
 .sobre-nos-conteudo-wrapper {
     padding: 1rem;
     width: 100%;
 }
-
 .nos-title {
     font-size: 4rem;
     line-height: 2.25rem;
@@ -376,7 +335,6 @@ body {
     color: #f2e8cd;
     margin-left: 6rem;
 }
-
 .sobre-nos-inner-flex {
     display: flex;
     flex-direction: column;
@@ -384,7 +342,6 @@ body {
     justify-content: center;
     gap: 1rem;
 }
-
 .sobre-nos-texto-div {
     position: relative;
     height: 40vh;
@@ -401,14 +358,12 @@ body {
     padding-left: 3rem;
     padding-right: 2rem;
 }
-
 .sobre-nos-texto {
     font-size: 2rem;
     color: #ffffff;
     font-weight: bold;
     text-align: left;
 }
-
 .sobre-nos-imagem-container {
     position: relative;
     padding: 1rem;
@@ -418,11 +373,9 @@ body {
     margin-left: 5%;
     margin-top: -4rem;
 }
-
 .sobre-nos-imagem {
     border-radius: 2.3rem;
 }
-
 /* Seção "Funcionalidades" */
 .secao-funcionalidades {
     margin-top: 10rem;
@@ -431,7 +384,6 @@ body {
     padding-left: 2rem;
     padding-right: 2rem;
 }
-
 .titulo-funcionalidades {
     font-size: 4rem;
     line-height: 2.25rem;
@@ -442,7 +394,6 @@ body {
     text-align: right;
     margin-right: 14rem;
 }
-
 .funcionalidades-conteudo-wrapper {
     display: flex;
     align-items: center;
@@ -454,7 +405,6 @@ body {
     margin-left: 20rem;
     padding: 1rem;
 }
-
 /* Container principal do carrossel */
 .carrossel-principal-container {
     display: flex;
@@ -464,7 +414,6 @@ body {
     max-width: 37rem;
     margin-right: auto;
 }
-
 /* Imagem fixa à esquerda */
 .imagem-fixa-container {
     display: flex;
@@ -478,7 +427,6 @@ body {
     height: 100%; /* Altura igual ao container */
     margin-left: 4rem;
 }
-
 .imagem-fixa {
     border-radius: 0.5rem;
     width: 580px;
@@ -487,7 +435,6 @@ body {
     object-fit: contain;
     max-height: 30rem;
 }
-
 /* Carrossel (texto) à direita */
 .carousel-wrapper {
     display: flex;
@@ -497,7 +444,6 @@ body {
     height: 380px;
     align-content: space-evenly;
 }
-
 .carrossel-item-estilo {
     width: 400px;
     height: 100%;
@@ -513,7 +459,6 @@ body {
     min-height: 20rem;
     /* border: 2px solid red; */
 }
-
 .carrossel-item-titulo {
     color: #f2e8cd;
     font-size: 1.5rem;
@@ -523,7 +468,6 @@ body {
     font-family: 'Libre Baskerville', serif;
     text-align: left;
 }
-
 .carrossel-item-lista {
     list-style-type: disc;
     list-style-position: inside;
@@ -531,7 +475,6 @@ body {
     line-height: 1.6rem;
     color: rgba(255, 255, 255, 0.71);  
 }
-
 /* Setas do carrossel */
 .carousel-arrow {
     position: absolute;
@@ -551,21 +494,17 @@ body {
     justify-content: center;
     transition: background-color 0.3s ease;
 }
-
 .carousel-arrow:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
-
 .carousel-arrow.left { left: 0px; }
 .carousel-arrow.right { right: -270px; }
-
 /* Indicadores de página */
 .carrossel-dots-container {
     display: flex;
     justify-content: center;
     margin-top: 1rem;
 }
-
 .dot {
     height: 10px;
     width: 10px;
@@ -575,10 +514,7 @@ body {
     display: inline-block;
     transition: background-color 0.6s ease;
 }
-
 .dot.active { background-color: #717171; }
-
-
 /* Seção "Parcerias" */
 .secao-parcerias {
     padding-top: 4rem;
@@ -590,7 +526,6 @@ body {
     position: relative; /* Garante que ele permaneça no fluxo normal e não fique oculto */
     z-index: 5; /* Mantém-no acima do lobo */
 }
-
 .titulo-parcerias {
     color: #fdfaec;
     font-size: 1.875rem;
@@ -599,14 +534,12 @@ body {
     margin-bottom: 2rem;
     font-family: 'Libre Baskerville', serif;
 }
-
 .parcerias-container-flex {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
 }
-
 .parcerias-linha-flex {
     display: flex;
     flex-wrap: wrap;
@@ -614,7 +547,6 @@ body {
     gap: 11rem;
     margin-left: 5rem;
 }
-
 .parceria-botao {
     width: 5rem;
     height: 5rem;
@@ -625,16 +557,13 @@ body {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease-in-out;
 }
-
 .inter-botao {
     background-color: #EA7100;
 }
-
 .parceria-botao:hover {
     transform: scale(1.1);
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
-
 .parcerias-linha-flex-topo {
     display: flex;
     flex-wrap: wrap;
@@ -643,7 +572,6 @@ body {
     margin-top: 1.5rem;
     margin-right: 10rem;
 }
-
 .parceria-botao2 {
     width: 5rem;
     height: 5rem;
@@ -654,12 +582,10 @@ body {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease-in-out;
 }
-
 .parceria-botao2:hover {
     transform: scale(1.1);
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
-
 .parceria-logo {
     background-color: #ffffff;
     width: 5rem;
@@ -667,7 +593,6 @@ body {
     object-fit: fill;
     border-radius: 50%;
 }
-
 /* Seção "Trabalhe Conosco" */
 .secao-trabalhe-conosco {
     padding-top: 4rem;
@@ -678,7 +603,6 @@ body {
     position: relative; /* Garante que ele permaneça no fluxo normal e não fique oculto */
     z-index: 5; /* Mantém-no acima do lobo */
 }
-
 .titulo-trabalhe-conosco {
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -688,7 +612,6 @@ body {
     font-family: 'Libre Baskerville', serif;
     color: #d88e00;
 }
-
 .trabalhe-conosco-conteudo {
     max-width: 42rem;
     margin-left: auto;
@@ -698,13 +621,11 @@ body {
     border-radius: 0.5rem;
     padding: 1rem;
 }
-
 .trabalhe-conosco-texto {
     font-size: 1.125rem;
     line-height: 1.75rem;
     margin-bottom: 2rem;
 }
-
 .trabalhe-conosco-botao {
     background-color: #f59e0b;
     color: #000000;
@@ -716,11 +637,9 @@ body {
     font-weight: 600;
     transition: background-color 0.3s ease;
 }
-
 .trabalhe-conosco-botao:hover {
     background-color: #d97706;
 }
-
 /* Seção de Contato (oculta) */
 .secao-contato-oculta {
     padding-top: 4rem;
@@ -731,26 +650,21 @@ body {
     background-color: #111827;
     display: none;
 }
-
 .titulo-contato {
     font-size: 1.875rem;
     line-height: 2.25rem;
     font-weight: 700;
     margin-bottom: 2rem;
 }
-
 .contato-texto {
     font-size: 1.125rem;
     line-height: 1.75rem;
 }
-
 .contato-link {
     color: #60a5fa;
     transition: text-decoration 0.3s ease;
 }
-
 .contato-link:hover { text-decoration: underline; }
-
 /* Rodapé */
 .rodape-estilo {
     background-color: #000000;
@@ -762,7 +676,6 @@ body {
     position: relative; /* Garante que ele permaneça no fluxo normal e não fique oculto */
     z-index: 5; /* Mantém-no acima do lobo */
 }
-
 .rodape-grid-container {
     max-width: 72rem;
     margin-left: auto;
@@ -775,23 +688,19 @@ body {
     padding-bottom: 2rem;
     margin-bottom: 2rem;
 }
-
 .rodape-coluna-logo-redes {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .rodape-logo {
     height: 7rem;
     margin-bottom: 1rem;
 }
-
 .rodape-redes-sociais {
     display: flex;
     gap: 1rem;
 }
-
 .rodape-icone-social {
     width: 2rem;
     height: 2rem;
@@ -802,31 +711,25 @@ body {
     justify-content: center;
     transition: background-color 0.3s ease;
 }
-
 .rodape-icone-social:hover {
     background-color: #4a5568;
 }
-
 .rodape-icone-svg {
     width: 1rem;
     height: 1rem;
     color: #ffffff;
 }
-
 .rodape-coluna-texto1 {
     text-align: left;
     border-right: 2px solid white;
 }
-
 .rodape-coluna-texto2 {
     text-align: left;
     border-right: 2px solid white;
 }
-
 .rodape-coluna-texto3 {
     text-align: left;
 }
-
 .rodape-titulo-coluna{
     font-size: 1.125rem;
     line-height: 1.75rem;
@@ -834,58 +737,45 @@ body {
     margin-bottom: 1rem;
     border-right: #fdfaec;
 }
-
 .rodape-link {
     color: #9ca3af;
     transition: text-decoration 0.3s ease;
 }
-
 .rodape-link:hover { text-decoration: underline; }
-
 .rodape-copyright {
     text-align: center;
 }
-
 /* Media Queries - Estilos para telas maiores */
 @media (min-width: 1024px) {
     .secao-hero-estilo {
         flex-direction: row;
     }
-    
     .hero-conteudo-principal {
         width: 50%;
     }
-    
     .hero-imagem-container {
         margin-top: 0;
         width: 50%;
     }
-    
     .cards-grid-container {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
-    
     .secao-sobre-nos {
         flex-direction: row;
     }
-    
     .sobre-nos-inner-flex {
         flex-direction: row;
     }
-    
     .carrossel-item-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-    
     .rodape-grid-container {
         grid-template-columns: repeat(4, minmax(0, 1fr)); 
     }
-    
     .rodape-coluna-logo-redes { 
         align-items: flex-start; 
     }
 }
-
 /* Media Queries - Estilos para telas menores */
 @media (max-width: 1840px) {    
     /* Ajusta o espaçamento para as parcerias para permitir 3 itens por linha para telas <= 1840px */
@@ -897,7 +787,6 @@ body {
         justify-content: center; /* Garante que os itens estejam centralizados */
     }
 }
-
 @media (max-width: 1091px){
     .sobre-nos-texto{
         font-size: 1.2rem;
@@ -906,21 +795,18 @@ body {
         padding-left: 16px;
     }
 }
-
 @media (max-width: 876px) {
     .secao-hero-estilo {
         flex-direction: column;
         margin-top: 25rem;
         gap:16px;
     }
-    
     /* O padding-top do body foi removido conforme solicitado */
     .cabecalho-estilo {
         flex-direction: column; /* Empilha logo, navegação e ícone de usuário verticalmente */
         align-items: center; /* Centraliza os itens horizontalmente */
         padding-top: 1rem; /* Ajusta o padding superior para telas menores */
     }
-    
     .div-botao-header {
         position: static; /* Remove o posicionamento absoluto, colocando-o de volta no fluxo */
         left: auto;
@@ -929,25 +815,20 @@ body {
         width: 100%; /* Permite que o container da navegação ocupe a largura total */
         justify-content: center; /* Centraliza os itens de navegação dentro do seu container */
     }
-    
     .navegacao-lista {
         flex-wrap: wrap; /* Permite que os botões de navegação quebrem em múltiplas linhas */
         justify-content: center; /* Centraliza os botões quando eles quebram */
         gap: 0.5rem; /* Reduz o espaçamento entre os botões para melhor quebra */
     }
-    
     .botao-usuario-estilo {
         margin-top: 1rem; /* Adiciona espaçamento abaixo da navegação */
     }
-    
     .LiveTask-logo-home {
         height: 8rem; /* Opcional: Reduz o tamanho do logo para telas menores */
     }
-    
     .secao-lobo-laranja {
         pointer-events: none; /* Permite que cliques passem para elementos atrás dele */
     }
-    
     .parcerias-linha-flex,
     .parcerias-linha-flex-topo {
         gap: 1rem; /* Espaçamento reduzido para mais itens por linha */
@@ -956,7 +837,6 @@ body {
         justify-content: center; /* Garante que os itens estejam centralizados */
     }
 }
-
 @media (max-width: 767px) {
     .rodape-grid-container {
         /* Define um grid com 3 colunas para o conteúdo de texto */
@@ -964,7 +844,6 @@ body {
         /* Ajusta o espaçamento entre as colunas */
         gap: 1rem;
     }
-    
     .rodape-coluna-logo-redes {
         /* Faz com que a coluna do logo e redes sociais ocupe todas as 3 colunas */
         grid-column: 1 / -1; /* Inicia na primeira linha e vai até o final da última */
@@ -973,37 +852,31 @@ body {
         /* Adiciona uma margem inferior para separar do conteúdo abaixo */
         margin-bottom: 1.5rem;
     }
-    
     .rodape-coluna-texto {
         /* Garante que o texto dentro das colunas esteja centralizado, se necessário */
         text-align: center;
     }
-    
     .rodape-coluna-texto ul {
         /* Remove paddings e margins padrão de listas para um alinhamento limpo */
         list-style: none;
         padding: 0;
         margin: 0;
     }
-    
     .rodape-titulo-coluna {
         /* Garante que o título da coluna esteja alinhado ao topo */
         margin-top: 0;
     }
 }
-
 @media (max-width: 600px) {
     .sobre-nos-texto{
         font-size: 0.9rem;
     }
-    
     .rodape-grid-container {
         /* Muda o grid para ter 2 colunas */
         grid-template-columns: repeat(2, minmax(0, 1fr));
         /* Ajusta o espaçamento entre as colunas */
         gap: 1rem;
     }
-    
     .rodape-coluna-logo-redes {
         /* Faz com que a coluna do logo e redes sociais ocupe ambas as 2 colunas */
         grid-column: 1 / -1;
@@ -1012,12 +885,10 @@ body {
         /* Adiciona uma margem inferior para separar do conteúdo abaixo */
         margin-bottom: 1.5rem;
     }
-    
     .rodape-coluna-texto {
         /* Garante que o texto dentro das colunas esteja centralizado */
         text-align: center;
     }
-    
     /* Regra específica para a coluna "Legal" em telas <= 600px */
     .rodape-coluna-texto:last-of-type {
         /* Faz com que a coluna "Legal" ocupe ambas as 2 colunas quando ela se quebra para a próxima linha */
@@ -1025,80 +896,65 @@ body {
         /* Garante que o conteúdo dentro dela (títulos e links) esteja centralizado */
         text-align: center;
     }
-    
     .rodape-coluna-texto ul {
         /* Remove paddings e margins padrão de listas para um alinhamento limpo */
         list-style: none;
         padding: 0;
         margin: 0;
     }
-    
     .rodape-titulo-coluna {
         /* Garante que o título da coluna esteja alinhado ao topo */
         margin-top: 0;
     }
 }
-
 @media (max-width: 463px) {
     .sobre-nos-texto{
         font-size: 0.6rem;
     }
 }
-
 @media (max-width: 440px) {
     .secao-hero-estilo {
         flex-direction: column;
         margin-top: 15rem;
     }
-    
     .div-botao-header {
         flex-direction: column; /* Empilha os botões verticalmente */
         align-items: center; /* Centraliza os botões empilhados */
         margin-top: 1.5rem;
     }
-    
     .navegacao-lista {
         gap: 1rem; /* Reduz o espaçamento para botões empilhados */
         flex-direction: column; /* Garante que os itens da lista se empilhem */
     }
-    
     .header-button {
         padding: 0.5rem 0.8rem; /* Ajusta o padding para botões menores */
     }
-    
     .sobre-nos-texto{
         font-size: 0.9rem;
     }
 }
-
 @media (max-width: 390px) {
     .secao-hero-estilo {
         flex-direction: column;
         margin-top: 20rem;
     }
-    
     .div-botao-header {
         margin-top: 1rem; /* Ajusta a margem para telas ainda menores */
     }
-    
     .navegacao-lista {
         gap: 1rem; /* Reduz ainda mais o espaçamento */
     }
-    
     .header-button {
         font-size: 0.8rem;
     }
-    
     .LiveTask-logo-home {
         height: 6rem; /* Diminui o logo para telas muito pequenas */
     }
-    
     .botao-usuario-estilo {
         padding: 0.5rem;
         width: 4rem;
         height: 4rem;
     }
-    
     .icone-usuario-estilo {
         display: flex;
         justify-content: center;
@@ -1106,7 +962,6 @@ body {
         width: 1.2rem;
         height: 1.2rem;
     }
-    
     .sobre-nos-texto{
         font-size: 0.6rem;
     }

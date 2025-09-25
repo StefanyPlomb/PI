@@ -1,127 +1,129 @@
 body {
-    min-height: 100vh;
-    background-image: url('/SRC/IMG/FundoMontanha.jpg');
-    background-size: cover;
+    background-image: url("/SRC/IMG/FundoMontanha.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    font-family: 'Open Sans', sans-serif;
+    background-size: cover;
+    font-family: "Open Sans", sans-serif;
+    min-height: 100vh;
 }
 
 .cadastro-overlay {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    left: 0;
     min-height: 100vh;
     min-width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: fixed;
     top: 0;
-    left: 0;
 }
 
 .cadastro-container {
     background: rgba(30, 30, 30, 0.85);
     border-radius: 16px;
-    padding: 2.5rem 2rem;
-    max-width: 400px;
-    width: 100%;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    padding: 2.5rem 2rem;
     text-align: center;
+    width: 100%;
 }
 
 .cadastro-avatar {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    background: #222;
-    display: flex;
     align-items: center;
+    background: #222;
+    border: 4px solid #000;
+    border-radius: 50%;
+    display: flex;
+    height: 120px;
     justify-content: center;
     margin: 0 auto 1.5rem auto;
-    border: 4px solid #000;
     position: relative;
-    img{
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        object-fit: cover;
-        background-color: white;
-    }
+    width: 120px;
 }
 
 .cadastro-avatar::before {
+    background: #fff;
+    border-radius: 50%;
     content: "";
     display: block;
-    width: 70px;
     height: 70px;
-    border-radius: 50%;
-    background: #fff;
     margin: auto;
+    width: 70px;
+}
+
+.cadastro-avatar img {
+    background-color: white;
+    border-radius: 50%;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
 }
 
 .cadastro-title {
     color: #fff;
+    font-family: "League Spartan", sans-serif;
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 0.75rem;
-    font-family: 'League Spartan', sans-serif;
 }
 
 .cadastro-input-group {
-    position: relative;
     margin-bottom: 1rem;
+    position: relative;
     width: 100%;
-}
-
-.cadastro-input {
-    width: 100%;
-    padding: 0.75rem 2.5rem 0.75rem 3rem;
-    border-radius: 999px;
-    border: none;
-    background: #fff;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #6B7280;
-    outline: none;
-    box-sizing: border-box;
-    align-self: center;
-    justify-content: center;
 }
 
 .cadastro-input-icon {
-    position: absolute;
     left: 1rem;
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
     z-index: 2;
 }
 
 .cadastro-icon {
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    display: flex;
     align-items: center;
-    justify-content: center;
+    border-radius: 50%;
     color: #fff;
+    display: flex;
     font-size: 1rem;
+    height: 22px;
+    justify-content: center;
+    width: 22px;
 }
 
 .cadastro-icon-user::before {
     content: "👤";
 }
+
 .cadastro-icon-email::before {
     content: "✉️";
 }
+
 .cadastro-icon-password::before {
     content: "🔒";
 }
 
+.cadastro-input {
+    background: #fff;
+    border: none;
+    border-radius: 999px;
+    box-sizing: border-box;
+    color: #6B7280;
+    font-size: 1.1rem;
+    font-weight: 600;
+    justify-content: center;
+    outline: none;
+    padding: 0.75rem 2.5rem 0.75rem 3rem;
+    width: 100%;
+}
+
 .cadastro-checkbox-group {
-    display: flex;
     align-items: center;
-    margin-bottom: 1.5rem;
     color: #fff;
+    display: flex;
     font-size: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .cadastro-checkbox {
@@ -130,32 +132,191 @@ body {
 }
 
 .cadastro-link-termos {
-    text-decoration: underline;
     color: #d88e00;
+    text-decoration: underline;
+}
+
+.cadastro-link {
+    color: #fff;
+    display: block;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    text-align: right;
+    text-decoration: underline;
 }
 
 .cadastro-btn {
     background: #d88e00;
-    color: #fff;
-    font-weight: 700;
-    font-size: 1.2rem;
     border: none;
     border-radius: 999px;
-    padding: 0.75rem 0;
-    width: 100%;
+    color: #fff;
     cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 0.75rem 0;
     transition: background 0.2s;
+    width: 100%;
 }
 
 .cadastro-btn:hover {
     background: #b36f00;
 }
 
-.cadastro-link {
-    color: #fff;
-    font-size: 0.95rem;
-    text-decoration: underline;
-    margin-bottom: 1rem;
+/* Estilos para o botão de voltar ao visita.html */
+.voltar-visita-btn {
+    align-items: center;
+    background-color: #d88e00;
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    left: 1rem;
+    padding: 0.5rem;
+    position: fixed;
+    text-decoration: none;
+    top: 1rem;
+    transition: background-color 0.3s;
+    z-index: 1001;
+}
+.voltar-visita-btn a {
+    align-items: center;
+    background-color: #d88e00;
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    left: 1rem;
+    padding: 0.5rem;
+    position: fixed;
+    text-decoration: none;
+    top: 1rem;
+    transition: background-color 0.3s;
+    z-index: 1001;
+}
+
+.voltar-visita-btn:hover {
+    background-color: #b36f00;
+}
+
+.voltar-visita-btn svg {
+    height: 1.2rem;
+    margin-right: 0.25rem;
+    width: 1.2rem;
+}
+
+/* Estilos para os Modais de Login/Esqueci Senha (copiado do visita.css) */
+.modal-overlay {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.modal-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    padding: 2rem;
+    width: 90%;
+}
+
+.texto-modal {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.input-group input {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    color: #000000;
+    font-size: 1rem;
+    padding: 0.75rem 2.5rem 0.75rem 1rem;
+    transition: border-color 0.3s;
+    width: 100%;
+}
+
+.input-group input:focus {
+    border-color: #1a73e8;
+    box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+    outline: none;
+}
+
+.input-group .icon {
+    color: #999;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.modal-button {
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    padding: 0.75rem;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.modal-button.login-button {
+    background-color: #1a73e8;
+    color: white;
+}
+
+.modal-button.login-button:hover {
+    background-color: #155bb5;
+}
+
+.modal-button.register-button {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    color: #333;
+}
+
+.modal-button.register-button:hover {
+    background-color: #e0e0e0;
+}
+
+/* deixar os inputs do modal de login iguais aos do visita */
+#user,
+#password,
+#forgot-email,
+#new-password,
+#confirm-new-password {
+    text-align: left;
+    width: 342px;
+}
+
+#forgot-password-link {
+    color: #3b82f6;
     display: block;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin-bottom: 1rem;
     text-align: right;
+}
+
+#forgot-password-link:hover {
+    text-decoration: underline;
 }
