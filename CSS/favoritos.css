@@ -1,0 +1,166 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e5e7eb;
+  color: #1f2937;
+  display: flex;
+  min-height: 100vh;
+}
+
+.TESTE{
+    display: flex;
+    color: #facc15;
+    justify-content:space-between;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background-color: #111827;
+  color: #f9fafb;
+  height: 100vh;
+  padding: 30px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar img {
+  display: block;
+  margin: 0 auto 30px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin-bottom: 15px;
+}
+
+.sidebar ul li button {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: transparent;
+  border: none;
+  color: #f9fafb;
+  font-weight: 600;
+  font-size: 15px;
+  text-align: left;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.sidebar ul li:hover button {
+  background-color: #1f2937;
+}
+
+.icon-star {
+  width: 18px;
+  height: 18px;
+  fill: #facc15;
+}
+
+/* Main */
+.main {
+  margin-left: 240px;
+  padding: 40px;
+  flex-grow: 1;
+  background-color: #f9fafb;
+  border-radius: 12px;
+  min-height: 100vh;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+}
+
+.search-bar {
+  margin-bottom: 30px;
+  margin-top: 15px;
+  display: flex;
+  justify-content:flex-end;
+  
+}
+
+.search-bar input {
+  padding: 10px 15px;
+  width: 320px;
+  border-radius: 8px;
+  border: 1.5px solid #ccc;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: #3d6dd8;
+}
+
+/* Cards */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+  gap: 20px;
+  flex-grow: 1;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  position: relative;
+  cursor: default;
+  transition: transform 0.2s ease;
+  color: #222;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.card p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Estrela no card */
+.star-favorite {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 24px;
+  height: 24px;
+  fill: #facc15;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.star-favorite:hover {
+  transform: scale(1.2);
+}
+
+/* Mensagem de vazio */
+.no-favorites {
+  text-align: center;
+  font-size: 18px;
+  color: #888;
+  margin-top: 50px;
+  display: none;
+}
+

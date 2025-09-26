@@ -6,6 +6,7 @@
   <title>Dashboard de Protocolos</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="../CSS/grafico.css">
+  <link rel="stylesheet" href="../CSS/acessibilidade.css">
 </head>
 <body>
   <!-- Sidebar -->
@@ -17,9 +18,7 @@
       <a href="../HTML/Entrada.html"><li><button>Home</button></li></a>
       <a href="../HTML/grafico.html"><li><button>Gráficos</button></li></a>
       <a href="../HTML/relatorio.html"><li><button>Relatórios</button></li></a>
-      <a href="#"><li><button>Filtros</button></li></a>
       <a href="#"><li><button>Favoritos</button></li></a>
-      <a href="#"><li><button>Salvos</button></li></a>  
     </ul>
   </div>
 
@@ -32,6 +31,19 @@
     </button>   
   </div>
 </div>
+
+<!-- Painel de acessibilidade -->
+  <div id="acessibilidade">
+    <button id="btn-acess">
+     <img src="../SRC/IMG/Acess.png" alt="Acessibilidade">
+    </button>
+    <div id="painel" aria-label="Menu de acessibilidade">
+      <button onclick="ajustarFonte(2)" aria-label="Aumentar fonte">A+</button>
+      <button onclick="ajustarFonte(-2)" aria-label="Diminuir fonte">A-</button>
+      <button id="btn-contraste" aria-label="Alternar alto contraste">Alto Contraste</button>
+      <button id="btn-dyslexia" aria-label="Fonte legível para dislexia">Fonte Legível</button>
+    </div>
+  </div>
  
     <!-- Cards -->
     <div class="cards">
@@ -76,5 +88,7 @@
  
   <!-- Scripts -->
   <script src="../JS/grafico.js"></script>
+    <script src="../JS/acessibilidade.js"></script>
+
 </body>
 </html>

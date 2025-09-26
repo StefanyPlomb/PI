@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Página de Relatórios</title>
   <link rel="stylesheet" href="../CSS/relatorio.css">
+  <link rel="stylesheet" href="../CSS/acessibilidade.css">
 </head>
 <body>
   <div class="sidebar">
@@ -15,9 +16,7 @@
       <a href="../HTML/Entrada.html"><li><button>Home</button></li></a>
       <a href="../HTML/grafico.html"><li><button>Gráficos</button></li></a>
       <a href="../HTML/relatorio.html"><li><button>Relatórios</button></li></a>
-      <a href="#"><li><button>Filtros</button></li></a>
-      <a href="#"><li><button>Favoritos</button></li></a>
-      <a href="#"><li><button>Salvos</button></li></a>  
+      <a href="../HTML/favoritos.html"><li><button>Favoritos</button></li></a>   
     </ul>
   </div>
 
@@ -48,6 +47,20 @@
     <input type="date" id="dateFilter" />
   </div>
 </header>
+
+<!-- Painel de acessibilidade -->
+  <div id="acessibilidade">
+    <button id="btn-acess">
+     <img src="../SRC/IMG/Acess.png" alt="Acessibilidade">
+    </button>
+    <div id="painel" aria-label="Menu de acessibilidade">
+      <button onclick="ajustarFonte(2)" aria-label="Aumentar fonte">A+</button>
+      <button onclick="ajustarFonte(-2)" aria-label="Diminuir fonte">A-</button>
+      <button id="btn-contraste" aria-label="Alternar alto contraste">Alto Contraste</button>
+      <button id="btn-dyslexia" aria-label="Fonte legível para dislexia">Fonte Legível</button>
+    </div>
+  </div>
+
 
       <!-- Projetos Finalizados -->
       <section class="report-card" data-type="finalizados">
@@ -136,5 +149,6 @@
   </main>
 
   <script src="../JS/relatorio.js"></script>
+    <script src="../JS/acessibilidade.js"></script>
 </body>
 </html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Favoritos - Dashboard</title>
+  <link rel="stylesheet" href="../CSS/favoritos.css">
+  <link rel="stylesheet" href="../CSS/acessibilidade.css">
+</head>
+<body>
+
+
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+  <div>
+    <img src="../SRC/IMG/logo_SVG.png" width="175px" alt="Logo do LiveTask"/>
+  </div>
+    <ul>
+      <a href="../HTML/Entrada.html"><li><button>Home</button></li></a>
+      <a href="../HTML/grafico.html"><li><button>Gráficos</button></li></a>
+      <a href="../HTML/relatorio.html"><li><button>Relatórios</button></li></a>
+      <a href="../HTML/favoritos.html"><li><button>Favoritos</button></li></a>   
+    </ul> 
+  </div>
+
+  <!-- Painel de acessibilidade -->
+  <div id="acessibilidade">
+    <button id="btn-acess">
+     <img src="../SRC/IMG/Acess.png" alt="Acessibilidade">
+    </button>
+    <div id="painel" aria-label="Menu de acessibilidade">
+      <button onclick="ajustarFonte(2)" aria-label="Aumentar fonte">A+</button>
+      <button onclick="ajustarFonte(-2)" aria-label="Diminuir fonte">A-</button>
+      <button id="btn-contraste" aria-label="Alternar alto contraste">Alto Contraste</button>
+      <button id="btn-dyslexia" aria-label="Fonte legível para dislexia">Fonte Legível</button>
+    </div>
+  </div>
+
+  <!-- Conteúdo principal -->
+  <main class="main">
+
+    <div class="TESTE">
+        <h1>Favoritos</h1>
+        <div class="search-bar">
+        <input type="search" id="searchInput" placeholder="Buscar favoritos..." />
+        </div>
+
+    </div>
+
+    <div class="cards-grid" id="cardsGrid">
+      <!-- Os cards são inseridos aqui via JavaScript -->
+    </div>
+
+    <p class="no-favorites" id="noFavorites">Você ainda não marcou nenhum card como favorito.</p>
+  </main>
+
+  <script src="../JS/favorito.js"></script>
+  <script src="../JS/acessibilidade.js"></script>
+</body>
+</html>
