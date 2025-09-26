@@ -1,0 +1,136 @@
+/* Fonte alternativa para dislexia */
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
+ 
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #fff;
+    color: #000;
+    transition: all 0.3s ease;
+}
+ 
+.acessibilidade-wrapper {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+ 
+#btn-acessibilidade {
+    background-color: #000;
+    color: #fff;
+    font-size: 24px;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+ 
+.painel {
+    margin-top: 10px;
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+ 
+ 
+.escondido {
+    display: none;
+}
+ 
+button {
+    cursor: pointer;
+    padding: 8px 14px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #888;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+}
+ 
+button:hover {
+    background-color: #ddd;
+}
+ 
+/* Alto contraste */
+.alto-contraste {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+ 
+/* Fonte legível para dislexia */
+.fonte-dyslexia {
+    font-family: 'Atkinson Hyperlegible', sans-serif !important;
+}
+ 
+/* Import da fonte */
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
+ 
+/* Acessibilidade */
+.alto-contraste {
+  background: #000 !important;
+  color: #fff !important;
+}
+ 
+.fonte-dyslexia {
+  font-family: 'Atkinson Hyperlegible', sans-serif !important;
+}
+ 
+/* Painel acessibilidade fixo */
+#acessibilidade {
+  position: fixed;
+  top: 30px;
+  right: 20px;
+  z-index: 1000;
+}
+ 
+#acessibilidade #btn-acess {
+  font-size: 500px;
+}
+ 
+#acessibilidade #painel {
+  display: none;   /* inicia escondido */
+  margin-top: 50px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* sombra para destacar */
+}
+ 
+#btn-acess img {
+  width: 48px;   /* ajuste o tamanho aqui */
+  height: 48px;  /* pode deixar só width se quiser proporção automática */
+}  
+ 
+#btn-acess {
+  position: fixed;
+  right: 10px;
+  top: 50px;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  z-index: 1000;
+}
+ 
+ 
+#acess-panel {
+  display: none;
+  position: fixed;
+  right: 10px;
+  bottom: 50px;
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+}

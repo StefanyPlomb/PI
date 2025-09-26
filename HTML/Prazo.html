@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LiveTask - Painel</title>
   <link rel="stylesheet" href="../CSS/Direcao.css"/>
+  <link rel="stylesheet" href="../CSS/acessibilidade.css"/>
 </head>
 </header>
 <body>
@@ -19,7 +20,6 @@
       <a href="#"><li><button>Filtros</button></li></a>
       <a href="#"><li><button>Favoritos</button></li></a>   
       <a href="#"><li><button>Salvos</button></li></a>  
-      <a href="#"><li><button>Acessibilidade</button></li></a>    
     </ul>
   </div>
 
@@ -42,7 +42,20 @@
     <div id="adicionar" class="adicionar">
       <!-- Conteúdo será carregado aqui via JS -->
     </div>
-    </section>    
+    </section> 
+    
+    <!-- Painel de acessibilidade -->
+  <div id="acessibilidade">
+    <button id="btn-acess">
+     <img src="../SRC/IMG/Acess.png" alt="Acessibilidade">
+    </button>
+    <div id="painel" aria-label="Menu de acessibilidade">
+      <button onclick="ajustarFonte(2)" aria-label="Aumentar fonte">A+</button>
+      <button onclick="ajustarFonte(-2)" aria-label="Diminuir fonte">A-</button>
+      <button id="btn-contraste" aria-label="Alternar alto contraste">Alto Contraste</button>
+      <button id="btn-dyslexia" aria-label="Fonte legível para dislexia">Fonte Legível</button>
+    </div>
+  </div>
 
   <section id="kanban">
     <div class="coluna" id="hoje">
@@ -69,6 +82,7 @@
     </div>
   </section>
   <script src="../JS/Adiciona.js"></script>
+  <script src="../JS/acessibilidade.js"></script>
 </main>
 
 </body>

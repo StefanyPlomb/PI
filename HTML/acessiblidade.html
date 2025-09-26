@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <title>Página com Acessibilidade</title>
+    <link rel="stylesheet" href="../PI/CSS/acessibilidade.css" />
+</head>
+<body>
+    <!-- Botão para abrir/fechar painel acessibilidade -->
+    <div class="acessibilidade-wrapper">
+        <button id="btn-acessibilidade" aria-label="Abrir menu de acessibilidade">♿</button>
+ 
+        <div id="painel-acessibilidade" class="painel escondido" aria-label="Menu de acessibilidade">
+            <button onclick="aumentarFonte()" aria-label="Aumentar fonte">A+</button>
+            <button onclick="diminuirFonte()" aria-label="Diminuir fonte">A-</button>
+            <button onclick="alternarContraste()" aria-label="Alternar alto contraste">Alto Contraste</button>
+            <button onclick="alternarFonteDyslexia()" aria-label="Alternar fonte legível para dislexia">Fonte Legível</button>
+        </div>
+    </div>
+ 
+    <script src="../PI/JS/acessibilidade.js"></script>
+</body>
+</html>

@@ -5,20 +5,22 @@ h2<!DOCTYPE html>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard de Protocolos</title>
   <link rel="stylesheet" href="../CSS/Direcao.css">
+  <link rel="stylesheet" href="../CSS/acessibilidade.css">
 </head>
 <body>
+
   <!-- Sidebar -->
   <div class="sidebar">
   <div>
     <img src="../SRC/IMG/logo_SVG.png" width="175px" alt="Logo do LiveTask"/>
   </div>
     <ul>
+      <a href="../HTML/Entrada.html"><li><button>Home</button></li></a>
       <a href="../HTML/grafico.html"><li><button>Gráficos</button></li></a>
       <a href="../HTML/relatorio.html"><li><button>Relatórios</button></li></a>
       <a href="#"><li><button>Filtros</button></li></a>
       <a href="#"><li><button>Favoritos</button></li></a>   
       <a href="#"><li><button>Salvos</button></li></a>  
-      <a href="#"><li><button>Acessibilidade</button></li></a>    
     </ul> 
   </div>
 
@@ -31,6 +33,19 @@ h2<!DOCTYPE html>
     </button>   
   </div>
 </div>
+
+<!-- Painel de acessibilidade -->
+  <div id="acessibilidade">
+    <button id="btn-acess">
+     <img src="../SRC/IMG/Acess.png" alt="Acessibilidade">
+    </button>
+    <div id="painel" aria-label="Menu de acessibilidade">
+      <button onclick="ajustarFonte(2)" aria-label="Aumentar fonte">A+</button>
+      <button onclick="ajustarFonte(-2)" aria-label="Diminuir fonte">A-</button>
+      <button id="btn-contraste" aria-label="Alternar alto contraste">Alto Contraste</button>
+      <button id="btn-dyslexia" aria-label="Fonte legível para dislexia">Fonte Legível</button>
+    </div>
+  </div>
 
 
     <!-- Menu de Filtros + Kanban -->
@@ -69,8 +84,10 @@ h2<!DOCTYPE html>
       </section>
     </main>
   </div>
+  
 
   <!-- Scripts -->
   <script src="../JS/Adiciona.js"></script>
+  <script src="../JS/acessibilidade.js"></script>
 </body>
 </html>
