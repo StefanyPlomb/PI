@@ -3,39 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pendência de Estoque</title>
+  <title>Adicionar Protocolo</title>
   <link rel="stylesheet" href="../CSS/Adicionar.css" />
 </head>
- <body>
+<body>
   <main class="adicionar">
     <div class="conteudo">
       <span id="fechar">&times;</span>
- 
+
       <div class="conteudo-interno">
+        <!-- LADO ESQUERDO: FORMULÁRIO -->
         <div class="modal-left">
-          <h2>Adicionar Nova Tarefa:</h2>
-          <textarea class="caixa-textarea" placeholder="Digite seu texto..."></textarea>
-          <button class="button-tarefa">Salvar</button>
+          <h2>Novo Protocolo</h2>
+          <form id="form-protocolo">
+            <label>Nome do Protocolo:</label>
+            <input type="text" id="nomeProtocolo" placeholder="Ex: Revisão de Estoque 2025" required />
+
+            <label>Data de Criação:</label>
+            <input type="date" id="dataCriacao" required />
+
+            <label>Data de Finalização:</label>
+            <input type="date" id="dataFinal" />
+
+            <label>Solicitante:</label>
+            <input type="text" id="solicitante" placeholder="Ex: Equipe de Desenvolvimento" required />
+
+            <label>Breve Descrição:</label>
+            <textarea id="descricao" class="caixa-textarea" placeholder="Explique o objetivo ou contexto deste protocolo..." required></textarea>
+
+            <button type="submit" class="button-tarefa">Salvar Protocolo</button>
+          </form>
         </div>
- 
+
+        <!-- LADO DIREITO: INFORMAÇÕES GERADAS -->
         <div class="modal-right">
           <div class="info-text">
-            <p><strong>Solicitante:</strong> Equipe de Desenvolvimento</p>
-            <p><strong>Empresa:</strong> Santo Antônio - BA</p>
-            <p><strong>Data de envio:</strong> 15/05/2025 15:32:53</p>
-            <p><strong>Última edição:</strong> 03/06/2025 13:42:06</p>
-            <p><strong>Prazo:</strong> 30/09/2025 23:59:59</p>
-            <p><strong>Prazo:</strong> 30/09/2025 23:59:59</p>
-            <p><strong>Prazo:</strong> 30/09/2025 23:59:59</p>
-            <p><strong>Prazo:</strong> 30/09/2025 23:59:59</p>
-            <p><strong>Prazo:</strong> 30/09/2025 23:59:59</p>      
-            <p><strong>Prazo:</strong> 30/09/2025 23:59:59</p>
-          </div>        
-          <button class="button-tarefa atualizar">Atualizar</button>
+            <h3>Informações do Protocolo</h3>
+            <p><strong>Solicitante:</strong> <span id="infoSolicitante">—</span></p>
+            <p><strong>Data de criação:</strong> <span id="infoCriacao">—</span></p>
+            <p><strong>Data final:</strong> <span id="infoFinal">—</span></p>
+            <p><strong>Última atualização:</strong> <span id="infoAtualizacao">—</span></p>
+            <p><strong>Status:</strong> <span id="infoStatus">Em andamento</span></p>
+          </div>
+          <button class="button-tarefa atualizar" id="btnAtualizar">Adicionar Conversa</button>
         </div>
       </div>
- 
     </div>
   </main>
+
+  <script>
+    // Exemplo de exibição dinâmica
+    document.getElementById('form-protocolo').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      document.getElementById('infoSolicitante').textContent = document.getElementById('solicitante').value;
+      document.getElementById('infoCriacao').textContent = document.getElementById('dataCriacao').value;
+      document.getElementById('infoFinal').textContent = document.getElementById('dataFinal').value || '—';
+      document.getElementById('infoAtualizacao').textContent = new Date().toLocaleString();
+
+      alert('✅ Protocolo salvo com sucesso!');
+    });
+  </script>
 </body>
 </html>

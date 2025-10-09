@@ -66,7 +66,7 @@ body {
 /* Header */
 .header {
   display: flex;
-  justify-content:flex-end;
+  justify-content:space-between;
   align-items: center;
   margin-right: 25px;
   margin-bottom: 25px;      
@@ -88,9 +88,9 @@ body {
 }
 .card {
   background: #fff;
-  border-radius: 12px;
+  border-radius: 20px;
   padding: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 .card h3 {
   margin: 0;
@@ -125,39 +125,6 @@ body {
 #pieChart{
     padding: 20px;
 }
-
-
-.cabecalho-logo-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.botao-usuario-estilo {
-    width: 4rem;
-    height: 4rem;
-    background-color: #000000;
-    border-radius: 100px;      
-    display: flex;
-    align-items: center;
-    justify-content: center;  
-    transition: background-color 0.3s ease;
-    cursor: pointer;    
-    border: 3px solid white;    
-}
-.botao-usuario-estilo:hover {
-    background-color: #d88e00;
-}        
-.icone-usuario-estilo {
-    width: 2rem;
-    height: 2rem;
-    color: #ffffff;
-    transition: width 0.25s ease-in-out, height 0.25s ease-in-out;  
-}        
-.botao-usuario-estilo:hover .icone-usuario-estilo {
-    width: 3rem;
-    height: 3rem;       
-} 
 
 .barChart{
   background: #fff;

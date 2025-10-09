@@ -5,8 +5,8 @@ body {
     font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 1.6;
-    margin: 20px;
-    background-color: #fff;
+    margin: 10px;
+    background-color:#d88e00;
     color: #000;
     transition: all 0.3s ease;
 }
@@ -26,6 +26,7 @@ body {
     border: none;
     border-radius: 50%;
     cursor: pointer;
+  
 }
  
 .painel {
@@ -106,8 +107,8 @@ button:hover {
 }
  
 #btn-acess img {
-  width: 48px;   /* ajuste o tamanho aqui */
-  height: 48px;  /* pode deixar só width se quiser proporção automática */
+  width: 40px;   /* ajuste o tamanho aqui */
+  height: 40px;  /* pode deixar só width se quiser proporção automática */
 }  
  
 #btn-acess {

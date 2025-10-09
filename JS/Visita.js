@@ -144,7 +144,7 @@ loginButton.addEventListener('click', () => {
     // Em uma implementação real, isso seria feito no backend.
     // Aqui, é uma simulação de um usuário válido.
     const usuariosValidos = [
-        { username: 'admin', password: 'admin123' },
+        { username: 'admin', password: '123' },
         { username: 'user1', password: 'senha123' }
     ];
 

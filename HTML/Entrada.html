@@ -25,9 +25,10 @@ h2<!DOCTYPE html>
   <!-- Main -->
   <div class="main">
   <div class="header">
+    <h1>Home</h1>
   <div class="cabecalho-logo-container">
     <button class="botao-usuario-estilo" id="open-modal-button">
-      <img src="../SRC/IMG/icone-usuario.webp" alt="Usuário" class="icone-usuario-estilo">
+      <img src="../SRC/IMG/icone-usuario.webp" alt="Usuário" class="icone-usuario-estilo" width="">
     </button>   
   </div>
 </div>
@@ -35,7 +36,7 @@ h2<!DOCTYPE html>
 <!-- Painel de acessibilidade -->
   <div id="acessibilidade">
     <button id="btn-acess">
-     <img src="../SRC/IMG/Acess.png" alt="Acessibilidade">
+     <img src="../SRC/IMG/Acess.png" alt="Acessibilidade" >
     </button>
     <div id="painel" aria-label="Menu de acessibilidade">
       <button onclick="ajustarFonte(2)" aria-label="Aumentar fonte">A+</button>
@@ -59,30 +60,22 @@ h2<!DOCTYPE html>
         </div>
       </section>
 
-      <section id="kanban">
-        <div class="coluna" id="nao-iniciado">
-          <h2 class="titulo-coluna amarelo">Não iniciado</h2>
-          <div class="cards"></div>
-        </div>
+      <div id="kanban">
+  <div class="coluna" id="nao-iniciado">
+  <div class="titulo-coluna amarelo">A Fazer</div>
+  <div class="cards"></div>
+</div>
 
-        <div class="coluna" id="em-andamento">
-          <h2 class="titulo-coluna azul">Em Andamento</h2>
-          <div class="cards"></div>
-        </div>
+<div class="coluna" id="em-andamento">
+  <div class="titulo-coluna azul">Em Andamento</div>
+  <div class="cards"></div>
+</div>
 
-        <div class="coluna" id="urgente">
-          <h2 class="titulo-coluna vermelho">Urgente</h2>
-          <div class="cards"></div>
-        </div>
-
-        <div class="coluna" id="finalizado">
-          <h2 class="titulo-coluna verde">Finalizado</h2>
-          <div class="cards"></div>
-        </div>
-      </section>
-    </main>
-  </div>
-  
+<div class="coluna" id="finalizado">
+  <div class="titulo-coluna verde">Concluído</div>
+  <div class="cards"></div>
+</div>
+</div>
 
   <!-- Scripts -->
   <script src="../JS/Adiciona.js"></script>

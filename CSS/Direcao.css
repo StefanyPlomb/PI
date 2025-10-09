@@ -1,18 +1,18 @@
-/* Reset básico */
+/* 🔹 RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Fonte e cores base */
+/* 🔹 BASE */
 body {
   font-family: 'Inter', 'Segoe UI', Tahoma, sans-serif;
-  background-color: #e5e7eb; /* Cinza claro ao invés de branco puro */
+  background-color: #f3f4f6;
   color: #1f2937;
 }
 
-/* Sidebar */
+/* 🔹 SIDEBAR */
 .sidebar {
   width: 240px;
   background-color: #111827;
@@ -56,22 +56,22 @@ body {
   background-color: #1f2937;
 }
 
-/* Main */
+/* 🔹 MAIN */
 .main {
   margin-left: 260px;
   padding: 40px;
   min-height: 100vh;
-  background-color: #f9fafb; /* Cinza quase branco */
+  background-color: #f9fafb;
   border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
 }
 
-/* Header */
+/* 🔹 HEADER */
 .header {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
+  gap: 5px;
 }
 
 .header input {
@@ -88,7 +88,7 @@ body {
   outline: none;
 }
 
-/* Filtros */
+/* 🔹 FILTROS */
 #menu-filtros {
   display: flex;
   align-items: center;
@@ -100,14 +100,11 @@ body {
   padding: 10px 20px;
   border-radius: 999px;
   background-color: #e5e7eb;
-  list-style: none;
-  font-weight: 600;
   border: none;
+  font-weight: 600;
   color: #070707;
   transition: all 0.3s ease;
 }
-
-
 
 .filtro:hover {
   background-color: #e4be77;
@@ -120,6 +117,7 @@ body {
   box-shadow: 0 4px 14px rgba(219, 146, 9, 0.432);
 }
 
+/* 🔹 BOTÃO "+" */
 #abrirPainel {
   background-color: #d88e00;
   color: #fff;
@@ -133,46 +131,56 @@ body {
 }
 
 #abrirPainel:hover {
-  background-color: #d88e00;
+  background-color: #c27d00;
 }
 
-/* Kanban */
+/* 🔹 KANBAN */
 #kanban {
   display: flex;
   gap: 20px;
-  flex-wrap: wrap;
+  align-items: flex-start;
+  overflow-x: auto;
+  height: calc(100vh - 220px);
+  padding-bottom: 40px;
 }
 
+/* 🔹 COLUNAS */
 .coluna {
   flex: 1;
-  min-width: 280px;
-  height: 100px;
-  background-color: #f9fafb;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-}
-
-.titulo-coluna {
-  font-size: 20px;
-  font-weight: 600;
-  height: 60px;
-  padding: 10px 15px;
-  border-left: 7px solid;
+  min-width: 320px;
   background-color: #ffffff;
-  color: #1f2937;
-  border-radius: 6px;
-  margin-bottom: 15px;
-  box-shadow: 0 1px px rgba(0,0,0,0.05);
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-/* Cores suaves nas bordas */
-.titulo-coluna.amarelo { border-color: #facc15; /* amarelo suave */ }
-.titulo-coluna.azul    { border-color: #60a5fa; /* azul claro */ }
-.titulo-coluna.vermelho { border-color: #f87171; /* vermelho claro */ }
-.titulo-coluna.verde   { border-color: #34d399; /* verde claro */ }
+.coluna:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
 
-/* Cards */
+/* 🔹 TÍTULO DAS COLUNAS */
+.titulo-coluna {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 15px;
+  border-left: 6px solid;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  color: #1f2937;
+  margin-bottom: 5px;
+}
+
+.titulo-coluna.amarelo { border-color: #facc15; }
+.titulo-coluna.azul { border-color: #60a5fa; }
+.titulo-coluna.vermelho { border-color: #f87171; }
+.titulo-coluna.verde { border-color: #34d399; }
+
+/* 🔹 CARDS */
 .card {
   background-color: #ffffff;
   border-radius: 12px;
@@ -205,13 +213,13 @@ body {
   margin-top: 12px;
 }
 
-.avatar {
-  width: 32px;
-  height: 32px;
+.icone-usuario-estilo {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  object-fit: cover;
   border: 2px solid #d88e00;
 }
+
 
 .menu-card {
   background: none;
@@ -225,27 +233,7 @@ body {
   color: #d88e00;
 }
 
-/* Acessibilidade botão */
-#btn-acess img {
-  width: 32px;
-  height: 32px;
-}
-
-/* Botão de fechar */
-#fechar {
-  position: absolute;
-  top: 12px;
-  right: 20px;
-  font-size: 22px;
-  color: #9ca3af;
-  cursor: pointer;
-}
-
-#fechar:hover {
-  color: #ef4444;
-}
-
-/* Responsivo */
+/* 🔹 RESPONSIVO */
 @media (max-width: 1000px) {
   .main {
     margin-left: 0;
@@ -265,27 +253,4 @@ body {
   .coluna {
     width: 100%;
   }
-}
-
-/* Botão usuário */
-.botao-usuario-estilo {
-  width: 60px;
-  height: 60px;
-  background-color: #1f2937;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid #e5e7eb;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.botao-usuario-estilo:hover {
-  background-color: #d88e00;
-}
-
-.icone-usuario-estilo {
-  width: 24px;
-  height: 24px;
 }
