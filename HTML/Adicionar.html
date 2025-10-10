@@ -45,24 +45,12 @@
             <p><strong>Última atualização:</strong> <span id="infoAtualizacao">—</span></p>
             <p><strong>Status:</strong> <span id="infoStatus">Em andamento</span></p>
           </div>
-          <button class="button-tarefa atualizar" id="btnAtualizar">Adicionar Conversa</button>
+
         </div>
       </div>
     </div>
   </main>
 
-  <script>
-    // Exemplo de exibição dinâmica
-    document.getElementById('form-protocolo').addEventListener('submit', function(e) {
-      e.preventDefault();
 
-      document.getElementById('infoSolicitante').textContent = document.getElementById('solicitante').value;
-      document.getElementById('infoCriacao').textContent = document.getElementById('dataCriacao').value;
-      document.getElementById('infoFinal').textContent = document.getElementById('dataFinal').value || '—';
-      document.getElementById('infoAtualizacao').textContent = new Date().toLocaleString();
-
-      alert('✅ Protocolo salvo com sucesso!');
-    });
-  </script>
 </body>
 </html>

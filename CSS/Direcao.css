@@ -191,6 +191,14 @@ body {
   cursor: grab;
 }
 
+.card-header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+
 .card:hover {
   transform: translateY(-3px);
 }
@@ -233,24 +241,4 @@ body {
   color: #d88e00;
 }
 
-/* 🔹 RESPONSIVO */
-@media (max-width: 1000px) {
-  .main {
-    margin-left: 0;
-    padding: 20px;
-  }
 
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-
-  #kanban {
-    flex-direction: column;
-  }
-
-  .coluna {
-    width: 100%;
-  }
-}
